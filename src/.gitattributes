@@ -1,3 +1,16 @@
 * text=auto
 *.scss text eol=lf
 *.css text eol=lf
+# Dependency directories
+node_modules/
+
+# Sass/compiler output
+.css.map
+.css
+
+# IDE/Editor files
+.vscode/
+.idea/
+
+# System files
+.DS_Store

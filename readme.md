@@ -1,6 +1,6 @@
 # Project Name  
 
-Edule, a responsive Educational website landinng page **HTML, Sass, and Bootstrap**.  
+**Edule** , a responsive Educational website landinng page **HTML, Sass, and Bootstrap**.  
 
 ## Features  
 - fully responsive design 
@@ -13,7 +13,7 @@ Edule, a responsive Educational website landinng page **HTML, Sass, and Bootstra
 👉 [Live Preview](https://khalid-raza03.github.io/edule-landing-page/)  
 
 ## Screenshots
-![Project Screenshot](./screenshots/demo.png)
+![Project Screenshot](./images/edule-ss-1.png)
 
 ## Technologies  
 - HTML5  
@@ -23,7 +23,9 @@ Edule, a responsive Educational website landinng page **HTML, Sass, and Bootstra
 - Vanilla JavaScript  
 
 ## Installation in local 
-1. Clone the repo:  
+
+1. __Clone the repo:__  
+
    ```bash
    git clone https://github.com/your-username/repo.git
    ```
