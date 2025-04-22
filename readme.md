@@ -13,7 +13,7 @@
 👉 [Live Preview](https://khalid-raza03.github.io/edule-landing-page/)  
 
 ## Screenshots
-![Project Screenshot](./images/edule-ss-1.png)
+![Project Screenshot](./src/images/edule-ss-1.png)
 
 ## Technologies  
 - HTML5  
