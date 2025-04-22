@@ -1,0 +1,330 @@
+@import "variables";
+
+//standard breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint ==mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoint ==tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint ==desktop {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+}
+
+// for custom breakpoint
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+//navbar responsive
+
+@media screen and (max-width: 1200px) {
+  .nav-txt {
+    font-size: 0.875rem !important;
+  }
+}
+
+.nav-txt {
+  @media (max-width: 1400px) {
+    font-size: 0.875rem !important;
+  }
+}
+
+.top-nav {
+  @media (min-width: 992px) {
+    background-color: #212832;
+  }
+  @media (max-width: 992px) {
+    background-color: #eefbf3 !important;
+  }
+}
+
+//home section
+
+
+
+@media only screen and (max-width: 767px),
+  only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+  .edule-home {
+    height: auto !important;
+    padding-top: 200px !important;
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px),
+  only screen and (min-width: 992px) and (max-width: 1199px) {
+  .edule-rating-box {
+    right: 15px !important;
+    top: 10% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .edule-courses-home {
+    top: 57% !important;
+    left: 45% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 476px) {
+  .edule-courses-home {
+    top: 63% !important;
+    left: 50% !important;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .edule-video {
+    bottom: 0% !important;
+    left: 0;
+  }
+  .edule-video-btn {
+    bottom: 10% !important;
+    left: 7vw !important;
+
+    .play {
+      left: 50% !important;
+      top: 50% !important;
+      font-size: 30px;
+      color: #ffa200;
+      transform: translateX(-50%) translateY(-50%);
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .edule-video {
+    bottom: -3% !important;
+    left: -5% !important;
+  }
+  .edule-video-btn {
+    bottom: 7% !important;
+    left: 5vw !important;
+
+    .play {
+      left: 50% !important;
+      top: 50% !important;
+      font-size: 30px;
+      color: #ffa200;
+      transform: translateX(-50%) translateY(-50%);
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .edule-home .home-text-content h3 span::before{
+    width: 147px !important;
+    left: 75% !important;
+  }
+
+  .edule-home .edule-rating-box .box-rating{
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .edule-home .edule-rating-box .box-rating .count{
+    font-size: 1.25rem !important;
+  }
+
+  .edule-home .edule-rating-box .box-rating p{
+    font-size: 0.75rem !important;
+  }
+
+  .edule-courses-home {
+    top: unset !important;
+    bottom: 0% !important;
+    left: 2% !important;
+  }
+
+  .edule-home .edule-courses-home .edule-courses-home-content {
+    height:100px !important;
+    width: 100px !important;
+  }
+
+  .edule-home .edule-courses-home .edule-courses-home-content span {
+    font-size: 1rem !important;
+
+   
+  }
+
+  .edule-home .home-text-content{
+    padding: 35px !important;
+  }
+  .edule-home .home-text-content h3,
+  .edule-home .home-text-content h3 span {
+    font-size: 1.5rem !important;
+
+    &::before{
+      transform: translateX(-80%) !important;
+    }
+  }
+
+  .edule-home .home-text-content p {
+    font-size: 0.8rem !important;
+  }
+  .edule-rating-box {
+    top: 15% !important;
+    right: 15% !important;
+  }
+
+  .edule-title, .edule-title span{
+    font-size: 1.7rem !important;
+  }
+}
+
+// how it works section
+
+.how-it-works-wrapper {
+  @media only screen and (max-width: 767px) {
+    display: block !important;
+  }
+  .edule-work {
+    @media (max-width: 992px) and (min-width: 768px) {
+      padding: 1.25rem !important;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 0 auto;
+    }
+
+    h3 {
+      @media only screen and (max-width: 992px) and (min-width: 768px) {
+        font-size: 1.25rem !important;
+      }
+    }
+  }
+}
+
+//download section
+
+.download-app-wrapper {
+  @media screen and (max-width: 767px) {
+    display: block !important;
+  }
+  .section-title .main-title {
+    @media (max-width: 992px) and (min-width: 768px) {
+      font-size: 24px !important;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 30px !important;
+    }
+  }
+
+  .download-app-btn {
+    @media screen and (max-width: 767px) {
+      padding-left: 0 !important;
+    }
+
+    .app-btn {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .feedbacks .swiper {
+    overflow: hidden;
+  }
+
+  .feedbacks .swiper-slide {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .feedbacks .testimonials {
+    padding: 20px; /* Reduce padding */
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .feedbacks .testimonial-content p {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+//brand logo slider
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .section-title .main-title {
+    font-size: 1.5rem !important;
+  }
+
+  .supporter-wrapper {
+    padding: 50px 50px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .supporter-wrapper {
+    padding: 30px 30px !important;
+  }
+}
+
+//footer
+
+@media screen and (max-width: 991px) {
+  .copyright-wrapper {
+    display: block !important;
+    text-align: center;
+  }
+}
+
+// btns
+
+@media screen and (max-width: 462px) {
+
+  .home-btn,
+  .drop-info-btn {
+    font-size: 0.8rem !important;
+    padding: 10px 13px !important;
+  }
+  .main-nav {
+    .navbar {
+      padding: 1rem !important;
+    }
+  }
+
+  .be-instructor {
+    .instructor-wrapper {
+      padding: 85px 40px !important;
+      .left-box {
+        .sub-title{
+          font-size: 0.8rem;
+        }
+        .main-title {
+          span{
+            &::before{
+            width: 140px !important;
+            transform: translateX(-75%) !important;
+          }
+          }
+        }
+      }
+    }
+  }
+
+  .download-section .download-app-wrapper .download-app-btn .app-btn a {
+    width: 140px !important;
+  }
+
+
+ .main-title{
+  font-size: 1.5rem !important;
+
+ }
+}

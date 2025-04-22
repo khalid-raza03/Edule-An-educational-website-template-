@@ -1,0 +1,2136 @@
+@charset "UTF-8";
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+.container {
+  width: auto !important; /* Resets the width */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.transparent-dropDown-btn {
+  background-color: transparent !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.dropdown-toggle::after {
+  color: #fff !important;
+  border-top-color: #fff !important;
+}
+
+.col {
+  padding: 0px 4px !important;
+}
+
+.main-nav .nav-link {
+  font-size: 18px !important;
+  color: #000;
+}
+.main-nav .nav-link.active {
+  color: #309255;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-txt {
+    font-size: 0.875rem !important;
+  }
+}
+@media (max-width: 1400px) {
+  .nav-txt {
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .top-nav {
+    background-color: #212832;
+  }
+}
+@media (max-width: 992px) {
+  .top-nav {
+    background-color: #eefbf3 !important;
+  }
+}
+
+@media only screen and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .edule-home {
+    height: auto !important;
+    padding-top: 200px !important;
+    display: block !important;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1599px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .edule-rating-box {
+    right: 15px !important;
+    top: 10% !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .edule-courses-home {
+    top: 57% !important;
+    left: 45% !important;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 476px) {
+  .edule-courses-home {
+    top: 63% !important;
+    left: 50% !important;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .edule-video {
+    bottom: 0% !important;
+    left: 0;
+  }
+  .edule-video-btn {
+    bottom: 10% !important;
+    left: 7vw !important;
+  }
+  .edule-video-btn .play {
+    left: 50% !important;
+    top: 50% !important;
+    font-size: 30px;
+    color: #ffa200;
+    transform: translateX(-50%) translateY(-50%);
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .edule-video {
+    bottom: -3% !important;
+    left: -5% !important;
+  }
+  .edule-video-btn {
+    bottom: 7% !important;
+    left: 5vw !important;
+  }
+  .edule-video-btn .play {
+    left: 50% !important;
+    top: 50% !important;
+    font-size: 30px;
+    color: #ffa200;
+    transform: translateX(-50%) translateY(-50%);
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .edule-home .home-text-content h3 span::before {
+    width: 147px !important;
+    left: 75% !important;
+  }
+  .edule-home .edule-rating-box .box-rating {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .edule-home .edule-rating-box .box-rating .count {
+    font-size: 1.25rem !important;
+  }
+  .edule-home .edule-rating-box .box-rating p {
+    font-size: 0.75rem !important;
+  }
+  .edule-courses-home {
+    top: unset !important;
+    bottom: 0% !important;
+    left: 2% !important;
+  }
+  .edule-home .edule-courses-home .edule-courses-home-content {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .edule-home .edule-courses-home .edule-courses-home-content span {
+    font-size: 1rem !important;
+  }
+  .edule-home .home-text-content {
+    padding: 35px !important;
+  }
+  .edule-home .home-text-content h3,
+  .edule-home .home-text-content h3 span {
+    font-size: 1.5rem !important;
+  }
+  .edule-home .home-text-content h3::before,
+  .edule-home .home-text-content h3 span::before {
+    transform: translateX(-80%) !important;
+  }
+  .edule-home .home-text-content p {
+    font-size: 0.8rem !important;
+  }
+  .edule-rating-box {
+    top: 15% !important;
+    right: 15% !important;
+  }
+  .edule-title, .edule-title span {
+    font-size: 1.7rem !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .how-it-works-wrapper {
+    display: block !important;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .how-it-works-wrapper .edule-work {
+    padding: 1.25rem !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .how-it-works-wrapper .edule-work {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .how-it-works-wrapper .edule-work h3 {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .download-app-wrapper {
+    display: block !important;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .download-app-wrapper .section-title .main-title {
+    font-size: 24px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-app-wrapper .section-title .main-title {
+    font-size: 30px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .download-app-wrapper .download-app-btn {
+    padding-left: 0 !important;
+  }
+}
+.download-app-wrapper .download-app-btn .app-btn {
+  padding-left: 0 !important;
+}
+
+@media (max-width: 576px) {
+  .feedbacks .swiper {
+    overflow: hidden;
+  }
+  .feedbacks .swiper-slide {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .feedbacks .testimonials {
+    padding: 20px; /* Reduce padding */
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  .feedbacks .testimonial-content p {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .section-title .main-title {
+    font-size: 1.5rem !important;
+  }
+  .supporter-wrapper {
+    padding: 50px 50px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .supporter-wrapper {
+    padding: 30px 30px !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .copyright-wrapper {
+    display: block !important;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 462px) {
+  .home-btn,
+  .drop-info-btn {
+    font-size: 0.8rem !important;
+    padding: 10px 13px !important;
+  }
+  .main-nav .navbar {
+    padding: 1rem !important;
+  }
+  .be-instructor .instructor-wrapper {
+    padding: 85px 40px !important;
+  }
+  .be-instructor .instructor-wrapper .left-box .sub-title {
+    font-size: 0.8rem;
+  }
+  .be-instructor .instructor-wrapper .left-box .main-title span::before {
+    width: 140px !important;
+    transform: translateX(-75%) !important;
+  }
+  .download-section .download-app-wrapper .download-app-btn .app-btn a {
+    width: 140px !important;
+  }
+  .main-title {
+    font-size: 1.5rem !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#eduleScrollBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  font-size: 18px;
+  border: 0.6px solid #309255;
+  outline: none;
+  background-color: #309255;
+  color: #000;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+#eduleScrollBtn:hover {
+  background-color: #52565b;
+  color: #fff;
+}
+
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.animate-green-btn {
+  text-align: center;
+  color: #309255;
+  border: 1px solid #309255;
+  background-color: #eefbf3;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.4s, background-color 0.4s;
+  outline: none;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  padding: 17px 27px;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  /* Pseudo-element for bubble effect */
+  /* On hover, the bubble will expand */
+}
+.animate-green-btn:active {
+  transform: translateY(3px);
+}
+.animate-green-btn::after, .animate-green-btn::before {
+  border-radius: 3px;
+}
+.animate-green-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
+}
+.animate-green-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.edule-home,
+.edule-header {
+  width: 100%;
+  background-color: #eefbf3;
+}
+
+.main-nav {
+  position: relative;
+  transform: translateY(3rem);
+  z-index: 99;
+  transition: transform 0.5s ease-in-out;
+}
+.main-nav .navbar {
+  border: 1px solid rgba(48, 146, 85, 0.2509803922);
+  padding: 16px 25px;
+  border-radius: 0.9rem;
+}
+.main-nav .navbar .nav-btn {
+  border: 1px solid #309255;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.main-nav .navbar .nav-btn:hover {
+  background-color: #309255;
+  color: #fff;
+}
+.main-nav .navbar .nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-nav .navbar .nav-center .nav-link {
+  transition: all 0.3s ease-in-out;
+}
+.main-nav .navbar .nav-center .nav-link:hover {
+  color: #309255;
+}
+.main-nav .navbar .nav-center .home::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-3.webp);
+  width: 70px;
+  height: 5px;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes sticky {
+  0% {
+    top: -6rem;
+  }
+  100% {
+    top: 0%;
+  }
+}
+.main-nav.active {
+  position: fixed;
+  top: 0%;
+  transform: translateY(0);
+  width: 100%;
+  border-radius: 0;
+  background-color: #fff; /* White background for visibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  border: none; /* Removes border */
+  transition: transform 0.5s ease-in-out;
+  animation: sticky 0.7s forwards;
+}
+.main-nav.active .navbar {
+  border: none;
+}
+
+.edule-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 225px;
+  z-index: 999;
+  visibility: hidden;
+  list-style: none;
+  background-color: #fff;
+  border-top: 2px solid #000;
+  box-shadow: 2px 2px 20px rgba(33, 40, 50, 0.1);
+  padding: 10px 0px;
+  transform: translateY(1.3rem);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in;
+}
+.edule-dropdown li {
+  display: block;
+  padding: 10px 20px;
+}
+.edule-dropdown li a {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.edule-dropdown li a:hover {
+  color: #309255;
+  margin-left: 6px;
+}
+
+.dropdown-list:hover .edule-dropdown,
+.dropdown-sub-list:hover .edule-sub-dropdown-1 {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.edule-sub-dropdown-1 {
+  position: absolute;
+  top: -27%;
+  left: 100%;
+  width: 225px;
+  z-index: 999;
+  visibility: hidden;
+  list-style: none;
+  background-color: #fff;
+  border-top: 2px solid #000;
+  box-shadow: 2px 2px 20px rgba(33, 40, 50, 0.1);
+  padding: 10px 0px;
+  transform: translateY(1.3rem);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in;
+}
+.edule-sub-dropdown-1 li {
+  display: block;
+  padding: 10px 20px;
+}
+.edule-sub-dropdown-1 li a {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.edule-sub-dropdown-1 li a:hover {
+  color: #309255;
+  margin-left: 6px;
+}
+
+.offcanvas-backdrop {
+  background-color: transparent !important;
+}
+
+.mobile-menu-edule {
+  max-width: 300px;
+}
+.mobile-menu-edule .mobile-menu-body {
+  padding: 3rem 1.7rem 1.7rem 1.7rem;
+}
+.mobile-menu-edule .mobile-menu-body .navbar-nav a {
+  font-size: 0.9rem;
+}
+.mobile-menu-edule .mobile-menu-body .navbar-nav .fa-solid {
+  font-size: 1.2rem;
+}
+.mobile-menu-edule .mobile-menu-body .navbar-nav .nav-btn {
+  border: 1px solid #309255;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.mobile-menu-edule .mobile-menu-body .navbar-nav .nav-btn:hover {
+  background-color: #309255;
+  color: #fff;
+}
+.mobile-menu-edule .mobile-menu-body .edule-accordion {
+  margin-top: 1.5rem;
+  position: absolute;
+  left: 0;
+}
+.mobile-menu-edule .mobile-menu-body .edule-accordion .accordion,
+.mobile-menu-edule .mobile-menu-body .edule-accordion .accordion-static {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 0.9rem 0.5rem 0rem 1.2rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  text-align: left;
+  outline: none;
+  font-size: 0.9rem;
+  transition: all 0.6s ease-in-out;
+}
+.mobile-menu-edule .mobile-menu-body .edule-accordion .accordion:after {
+  content: "+";
+  color: #949191;
+  font-size: 1.5rem;
+  float: right;
+  margin-left: 5px;
+}
+.mobile-menu-edule .mobile-menu-body .edule-accordion .active:after {
+  content: "−";
+}
+.mobile-menu-edule .mobile-menu-body .edule-accordion .panel {
+  padding: 0 18px;
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+}
+.mobile-menu-edule .mobile-menu-body .mobile-menu-social {
+  padding: 10% 0 0 25%;
+}
+
+.edule-home {
+  position: relative;
+  background-color: #eefbf3;
+  height: 940px;
+  overflow: hidden;
+  padding-top: 190px;
+}
+.edule-home .animation-1 {
+  left: 5%;
+  top: 10%;
+  position: absolute;
+  animation: rotatefull 8s linear infinite;
+}
+@keyframes rotatefull {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.edule-home .edule-video {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+.edule-home .edule-video-btn {
+  position: absolute;
+  bottom: 15%;
+  left: 5vw;
+}
+.edule-home .edule-video-btn .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 30px;
+  color: #ffa200;
+  transform: translateX(-50%) translateY(-50%);
+  display: inline-block;
+}
+.edule-home .home-text-content {
+  padding: 20px 0px;
+  max-width: 420px;
+}
+.edule-home .home-text-content span {
+  font-size: 1.2rem;
+}
+.edule-home .home-text-content h3 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 1.5rem;
+}
+.edule-home .home-text-content h3 span {
+  position: relative;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+.edule-home .home-text-content h3 span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-4.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 214px;
+  height: 21px;
+  left: 50%;
+  bottom: -26px;
+  transform: translateX(-50%);
+}
+.edule-home .home-text-content p {
+  font-size: 1.2rem;
+  margin-top: 3.5rem;
+  color: #52565b;
+}
+.edule-home .home-text-content .home-btn {
+  background-color: #309255;
+  color: #fff;
+  border: none;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.4s, background-color 0.4s;
+  outline: none;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  padding: 17px 27px;
+}
+.edule-home .home-text-content .home-btn:active {
+  transform: translateY(3px);
+}
+.edule-home .home-text-content .home-btn::after, .edule-home .home-text-content .home-btn::before {
+  border-radius: 3px;
+}
+.edule-home .home-text-content .material-bubble {
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  /* Pseudo-element for bubble effect */
+  /* On hover, the bubble will expand */
+}
+.edule-home .home-text-content .material-bubble::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
+}
+.edule-home .home-text-content .material-bubble:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.edule-home .home-text-content .material-bubble::after {
+  background-color: #1a1a1a;
+}
+@keyframes left {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.edule-home .edule-courses-home {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+}
+.edule-home .edule-courses-home .edule-courses-home-content {
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  background-color: #309255;
+  border-radius: 50%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.edule-home .edule-courses-home .edule-courses-home-content span {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+.edule-home .edule-courses-home .animation-3 {
+  position: absolute;
+  top: -1rem;
+  left: 12rem;
+  animation: left 4s linear 0s infinite normal forwards;
+}
+.edule-home .edule-rating-box {
+  position: absolute;
+  top: 14%;
+  right: 8%;
+}
+.edule-home .edule-rating-box .box-rating {
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.edule-home .edule-rating-box .box-rating .count {
+  font-size: 30px;
+  font-weight: 500;
+  color: #309255;
+}
+.edule-home .edule-rating-box .box-rating .count i {
+  color: #ffa200;
+  font-size: 14px;
+  display: inline-block;
+}
+.edule-home .edule-rating-box .box-rating p {
+  color: #52565b;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.edule-home .edule-rating-box .shape {
+  margin-top: 45px;
+  padding-right: 30px;
+}
+.edule-home .edule-rating-box .animation-up {
+  animation: up 5s linear 0s infinite normal forwards;
+}
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.edule-course-category,
+.latest-news {
+  /* Style the tab content */
+}
+.edule-course-category .edule-title,
+.edule-course-category .edule-title span,
+.latest-news .edule-title,
+.latest-news .edule-title span {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+.edule-course-category .edule-title span,
+.latest-news .edule-title span {
+  position: relative;
+}
+.edule-course-category .edule-title span::before,
+.latest-news .edule-title span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-11.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 122px;
+  height: 24px;
+  left: 50%;
+  bottom: -26px;
+  transform: translateX(-50%);
+}
+.edule-course-category .input-group,
+.latest-news .input-group {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  border: 1px solid rgba(48, 146, 85, 0.2509803922);
+  overflow: hidden;
+  box-shadow: 0px 92px 26px 0px rgba(171, 171, 171, 0), 0px 59px 23px 0px rgba(171, 171, 171, 0.01), 0px 33px 20px 0px rgba(171, 171, 171, 0.05), 0px 15px 15px 0px rgba(171, 171, 171, 0.09), 0px 4px 8px 0px rgba(171, 171, 171, 0.1);
+}
+.edule-course-category .input-group .form-control,
+.latest-news .input-group .form-control {
+  border: none;
+  padding: 20px;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}
+.edule-course-category .input-group button,
+.latest-news .input-group button {
+  margin: 0.3rem;
+  padding: 0.975rem;
+  text-align: center;
+  border-radius: 0.625rem;
+  border-top-left-radius: 0.625rem !important;
+  border-bottom-left-radius: 0.625rem !important;
+  background-color: #deede4;
+  border: 0;
+  font-size: 1rem;
+  color: #309255;
+}
+.edule-course-category .input-group button i,
+.latest-news .input-group button i {
+  background-color: #fff;
+  color: #309255;
+}
+.edule-course-category .course-btn span,
+.latest-news .course-btn span {
+  text-align: center;
+  color: #309255;
+  border: 1px solid #309255;
+  background-color: #eefbf3;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.4s, background-color 0.4s;
+  outline: none;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  padding: 17px 27px;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  /* Pseudo-element for bubble effect */
+  /* On hover, the bubble will expand */
+}
+.edule-course-category .course-btn span:active,
+.latest-news .course-btn span:active {
+  transform: translateY(3px);
+}
+.edule-course-category .course-btn span::after, .edule-course-category .course-btn span::before,
+.latest-news .course-btn span::after,
+.latest-news .course-btn span::before {
+  border-radius: 3px;
+}
+.edule-course-category .course-btn span::after,
+.latest-news .course-btn span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
+}
+.edule-course-category .course-btn span:hover::after,
+.latest-news .course-btn span:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.edule-course-category .course-btn span::after,
+.latest-news .course-btn span::after {
+  background-color: #3db86b;
+}
+.edule-course-category .course-btn span:hover,
+.latest-news .course-btn span:hover {
+  color: #fff;
+}
+.edule-course-category .swiper,
+.latest-news .swiper {
+  width: 100%;
+  height: 100%;
+}
+.edule-course-category .swiper .swiper-slide,
+.latest-news .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edule-course-category .course-tabs,
+.latest-news .course-tabs {
+  background-color: #fff;
+  padding: 2.5rem 5rem;
+  border-radius: 0.6rem;
+  position: relative;
+  margin-top: 3rem;
+}
+.edule-course-category .course-tabs .swiper-button-next,
+.edule-course-category .course-tabs .swiper-button-prev,
+.latest-news .course-tabs .swiper-button-next,
+.latest-news .course-tabs .swiper-button-prev {
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  padding: 1.2rem;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.edule-course-category .course-tabs .swiper-button-next:hover,
+.edule-course-category .course-tabs .swiper-button-prev:hover,
+.latest-news .course-tabs .swiper-button-next:hover,
+.latest-news .course-tabs .swiper-button-prev:hover {
+  background-color: #309255;
+  color: #fff;
+}
+.edule-course-category .course-tabs .swiper-button-next:after,
+.edule-course-category .course-tabs .swiper-button-prev:after,
+.latest-news .course-tabs .swiper-button-next:after,
+.latest-news .course-tabs .swiper-button-prev:after {
+  font-size: 0.8rem;
+}
+.edule-course-category .course-tabs .swiper-button-prev,
+.latest-news .course-tabs .swiper-button-prev {
+  left: 1.8rem;
+}
+.edule-course-category .course-tabs .swiper-button-next,
+.latest-news .course-tabs .swiper-button-next {
+  right: 1.8rem;
+}
+.edule-course-category .course-tabs .eduleSwiper .eduleSwiper-wrapper .slides-edule span.active,
+.latest-news .course-tabs .eduleSwiper .eduleSwiper-wrapper .slides-edule span.active {
+  border-color: #309255;
+  color: #309255;
+}
+.edule-course-category .course-tabs .eduleSwiper .eduleSwiper-wrapper .slides-edule span,
+.latest-news .course-tabs .eduleSwiper .eduleSwiper-wrapper .slides-edule span {
+  width: 80%;
+  font-size: 0.9rem;
+  color: #000;
+  padding: 1.2rem 0;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(48, 146, 85, 0.2509803922);
+  background-color: #fff;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+.edule-course-category .course-tabs .eduleSwiper .eduleSwiper-wrapper .slides-edule span:hover,
+.latest-news .course-tabs .eduleSwiper .eduleSwiper-wrapper .slides-edule span:hover {
+  border-color: #309255;
+  color: #309255;
+}
+.edule-course-category .course-tab-content,
+.edule-course-category .latest-news-wrapper,
+.latest-news .course-tab-content,
+.latest-news .latest-news-wrapper {
+  padding-top: 2rem;
+}
+.edule-course-category .course-tab-content .tabcontent,
+.edule-course-category .course-tab-content .latest-news-content,
+.edule-course-category .latest-news-wrapper .tabcontent,
+.edule-course-category .latest-news-wrapper .latest-news-content,
+.latest-news .course-tab-content .tabcontent,
+.latest-news .course-tab-content .latest-news-content,
+.latest-news .latest-news-wrapper .tabcontent,
+.latest-news .latest-news-wrapper .latest-news-content {
+  padding-top: 1.25rem;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses,
+.edule-course-category .course-tab-content .latest-news-content .single-courses,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses,
+.latest-news .course-tab-content .tabcontent .single-courses,
+.latest-news .course-tab-content .latest-news-content .single-courses,
+.latest-news .latest-news-wrapper .tabcontent .single-courses,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses {
+  margin-top: 30px;
+  border: 1px solid rgba(48, 146, 85, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.3s ease 0s;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses:hover,
+.edule-course-category .course-tab-content .latest-news-content .single-courses:hover,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses:hover,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses:hover,
+.latest-news .course-tab-content .tabcontent .single-courses:hover,
+.latest-news .course-tab-content .latest-news-content .single-courses:hover,
+.latest-news .latest-news-wrapper .tabcontent .single-courses:hover,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses:hover {
+  border-color: #309255;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-images,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-images,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-images,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-images,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-images,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-images,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-images,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-images {
+  position: relative;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-images a,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-images a,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-images a,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-images a,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-images a,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-images a,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-images a,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-images a {
+  display: block;
+  color: inherit;
+  transition: all 0.3s ease 0s;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-images a img,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-images a img,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-images a img,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-images a img,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-images a img,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-images a img,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-images a img,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-images a img {
+  width: 100%;
+  border-radius: 0.9rem;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content {
+  padding-top: 25px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author {
+  display: flex;
+  align-items: center;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a {
+  color: inherit;
+  display: block;
+  transition: all 0.3sease 0s;
+  outline: 0;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a img,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a img,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a img,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a img,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a img,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a img,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-thumb a img,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-thumb a img {
+  width: 50px;
+  border-radius: 50%;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-name,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-name,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-name,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-name,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-name,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-name,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-name,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-name {
+  flex: 1;
+  padding-left: 12px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-name .name,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-name .name,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-name .name,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-name .name,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author .author .author-name .name,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .author .author-name .name,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .author .author-name .name,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .author .author-name .name {
+  text-decoration: none;
+  color: #52565b;
+  font-size: 14px;
+  font-weight: 400;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-author .tag a,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .tag a,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .tag a,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .tag a,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-author .tag a,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-author .tag a,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-author .tag a,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-author .tag a {
+  text-decoration: none;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #eefbf3;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #309255;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .title a,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .title a,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .title a,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .title a,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .title a,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .title a,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .title a,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .title a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #212832;
+  margin-top: 13px;
+  display: inline-block;
+  line-height: 1.4;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-meta,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-meta,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-meta .meta-1,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta .meta-1,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta .meta-1,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta .meta-1,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-meta .meta-1,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta .meta-1,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta .meta-1,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta .meta-1 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #52565b;
+  margin-right: 20px;
+  display: inline-block;
+  line-height: 1;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-meta .meta-1 i,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta .meta-1 i,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta .meta-1 i,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta .meta-1 i,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-meta .meta-1 i,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta .meta-1 i,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta .meta-1 i,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta .meta-1 i {
+  color: #309255;
+  margin-right: 5px;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-meta .meta-2,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta .meta-2,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta .meta-2,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta .meta-2,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-meta .meta-2,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-meta .meta-2,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-meta .meta-2,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-meta .meta-2 {
+  margin-right: 0;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-price .sale-price,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .sale-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #309255;
+  margin-right: 5px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-price .old-price,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-price .old-price {
+  font-size: 15px;
+  font-weight: 500;
+  color: #212832;
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review {
+  white-space: nowrap;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-count,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-count {
+  font-size: 15px;
+  font-weight: 500;
+  color: #212832;
+  margin-right: 2px;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star {
+  position: relative;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star i,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star i {
+  color: #52565b;
+  margin-right: 1px;
+  font-size: 0.7rem;
+  display: inline-block;
+  line-height: 1;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.edule-course-category .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.edule-course-category .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.edule-course-category .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.edule-course-category .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.latest-news .course-tab-content .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.latest-news .course-tab-content .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i,
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review .courses-review .rating-star .rating-bar i {
+  color: #ffa200;
+  margin-right: 1px;
+  font-size: 0.7rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+.be-instructor {
+  padding-top: 5rem;
+}
+.be-instructor .instructor-wrapper {
+  background-color: #eefbf3;
+  border-radius: 10px;
+  padding: 35px 100px 70px;
+  position: relative;
+}
+.be-instructor .instructor-wrapper .shape-12 {
+  bottom: 30px;
+  left: 30px;
+  position: absolute;
+  animation: rotatefull 8s linear infinite;
+}
+@keyframes rotatefull {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.be-instructor .instructor-wrapper .shape-13 {
+  position: absolute;
+  top: 50%;
+  left: 57.5%;
+  transform: translate(-50%, -50%);
+  width: 179px;
+}
+.be-instructor .instructor-wrapper .shape-14 {
+  position: absolute;
+  animation: rotatefull 8s linear infinite;
+  top: 30px;
+  right: 30px;
+}
+@keyframes rotatefull {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.be-instructor .instructor-wrapper .left-box {
+  max-width: 415px;
+  margin-top: 1.5rem;
+}
+.be-instructor .instructor-wrapper .left-box .sub-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #309255;
+  margin-bottom: 1.25rem;
+}
+.be-instructor .instructor-wrapper .left-box .main-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.be-instructor .instructor-wrapper .left-box .main-title span {
+  color: #309255;
+  position: relative;
+}
+.be-instructor .instructor-wrapper .left-box .main-title span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-4.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 210px;
+  height: 21px;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+}
+.be-instructor .instructor-wrapper .right-box {
+  text-align: right;
+  margin-top: 30px;
+}
+.be-instructor .instructor-wrapper .right-box .drop-info-btn {
+  background-color: #309255;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.4s, background-color 0.4s;
+  outline: none;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  padding: 17px 27px;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  /* Pseudo-element for bubble effect */
+  /* On hover, the bubble will expand */
+}
+.be-instructor .instructor-wrapper .right-box .drop-info-btn:active {
+  transform: translateY(3px);
+}
+.be-instructor .instructor-wrapper .right-box .drop-info-btn::after, .be-instructor .instructor-wrapper .right-box .drop-info-btn::before {
+  border-radius: 3px;
+}
+.be-instructor .instructor-wrapper .right-box .drop-info-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
+}
+.be-instructor .instructor-wrapper .right-box .drop-info-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.be-instructor .instructor-wrapper .right-box .drop-info-btn::after {
+  background-color: #1a1a1a;
+}
+
+.how-it-works {
+  padding: 80px 0;
+}
+.how-it-works .container {
+  width: 100% !important;
+}
+.how-it-works .sub-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #309255;
+  margin-bottom: 20px;
+}
+.how-it-works .main-title {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.how-it-works .main-title span {
+  color: #309255;
+  position: relative;
+}
+.how-it-works .main-title span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-4.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 121px;
+  height: 13px;
+  right: 0;
+  bottom: -11px;
+}
+.how-it-works .how-it-works-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+}
+.how-it-works .how-it-works-wrapper .edule-work {
+  max-width: 300px;
+  border-radius: 10px;
+  background-color: #e7f8ee;
+  padding: 2.4rem;
+  margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.how-it-works .how-it-works-wrapper .edule-work .shape-1 {
+  position: absolute;
+  left: -17px;
+  top: 0;
+  z-index: -1;
+}
+.how-it-works .how-it-works-wrapper .edule-work .work-icon {
+  text-align: left;
+}
+.how-it-works .how-it-works-wrapper .edule-work .work-icon i {
+  width: 65px;
+  height: 65px;
+  line-height: 68px;
+  text-align: center;
+  border: 1px solid rgba(48, 146, 85, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  color: #309255;
+  display: inline-block;
+  font-size: 32px;
+  transition: all 0.3s ease 0s;
+}
+.how-it-works .how-it-works-wrapper .edule-work .work-content {
+  padding-top: 33px;
+  text-align: left;
+}
+.how-it-works .how-it-works-wrapper .edule-work .work-content .title {
+  font-size: 25px;
+  font-weight: 500;
+  color: #212832;
+  margin-bottom: 0;
+}
+.how-it-works .how-it-works-wrapper .edule-work .work-content p {
+  font-size: 14px;
+  color: #696969;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.how-it-works .how-it-works-wrapper .work-arrow {
+  margin-top: 2rem;
+}
+
+.download-section {
+  background-color: #309255;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 0;
+}
+.download-section .app-shape {
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  position: absolute;
+}
+.download-section .app-shape-1 {
+  left: 70px;
+  bottom: 85px;
+}
+.download-section .app-shape-2 {
+  left: 31%;
+  top: 60px;
+}
+.download-section .app-shape-3 {
+  right: 15%;
+  bottom: 70%;
+}
+.download-section .app-shape-4 {
+  right: -243px;
+  top: -50px;
+}
+.download-section .download-app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.download-section .download-app-wrapper .section-title {
+  max-width: 520px;
+  margin-top: 25px;
+  padding-right: 15px;
+}
+.download-section .download-app-wrapper .section-title .sub-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.download-section .download-app-wrapper .section-title .main-title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.download-section .download-app-wrapper .shape-1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+@keyframes right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.download-section .download-app-wrapper .animation-right {
+  animation: right 5s linear 0s infinite normal forwards;
+}
+.download-section .download-app-wrapper .download-app-btn {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+.download-section .download-app-wrapper .download-app-btn .app-btn a {
+  width: 180px;
+  height: 63px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.15);
+}
+
+.feedbacks {
+  padding: 5rem 0;
+}
+.feedbacks .sub-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #309255;
+  margin-bottom: 20px;
+}
+.feedbacks .main-title {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.feedbacks .main-title span {
+  color: #309255;
+  position: relative;
+}
+.feedbacks .main-title span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-4.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 121px;
+  height: 13px;
+  right: 0;
+  bottom: -11px;
+}
+
+.feedbacks .swiper {
+  width: 100%;
+}
+.feedbacks .swiper .swiper-wrapper {
+  display: flex;
+  width: 100%;
+}
+.feedbacks .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.feedbacks .feedbackSwiper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.feedbacks .feedbackSwiper .testimonials {
+  text-align: center;
+  border: 1px solid rgba(48, 146, 85, 0.2);
+  border-radius: 10px;
+  padding: 45px 45px 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  flex: 0 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .author-thumb {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .author-thumb img {
+  display: block;
+  width: 90px;
+  border: 1px solid rgba(48, 146, 85, 0.2);
+  border-radius: 50%;
+  padding: 8px;
+  margin: 0 auto;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .author-thumb i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #309255;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .rating-star {
+  position: relative;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .rating-star i {
+  color: #52565b;
+  margin-right: 1px;
+  font-size: 0.7rem;
+  display: inline-block;
+  line-height: 1;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .rating-star .rating-bar {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-author .rating-star .rating-bar i {
+  color: #ffa200;
+  margin-right: 1px;
+  font-size: 0.7rem;
+  display: inline-block;
+  line-height: 1;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-content {
+  padding-top: 15px;
+  max-width: 100%;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-content p {
+  font-size: 15px;
+  color: #52565b;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-content h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 16px;
+}
+.feedbacks .feedbackSwiper .testimonials .testimonial-content span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #309255;
+  margin-top: 5px;
+  display: block;
+}
+.feedbacks .feedbackSwiper .swiper-pagination {
+  position: relative;
+  bottom: 0;
+  margin-top: 43px;
+  height: 18px;
+}
+.feedbacks .feedbackSwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #d1e5d9;
+  opacity: 1;
+  margin: 0 7px;
+  transition: all 0.3s ease 0s;
+}
+.feedbacks .feedbackSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #309255;
+}
+
+.supporters .supporter-wrapper {
+  background-color: #e7f8ee;
+  border-radius: 10px;
+  padding: 35px 100px 70px;
+  position: relative;
+}
+.supporters .supporter-wrapper .shape-19 {
+  position: absolute;
+  top: 60px;
+  right: 31%;
+}
+.supporters .supporter-wrapper .shape-20 {
+  top: 50px;
+  right: 45px;
+  position: absolute;
+  animation: rotatefull 8s linear infinite;
+}
+@keyframes rotatefull {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.supporters .supporter-wrapper .section-title {
+  padding-bottom: 0.7rem;
+}
+.supporters .supporter-wrapper .section-title .main-title {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.supporters .supporter-wrapper .section-title .main-title span {
+  color: #309255;
+  position: relative;
+}
+.supporters .supporter-wrapper .section-title .main-title span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-4.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 121px;
+  height: 13px;
+  right: 0;
+  bottom: -11px;
+}
+.supporters .supporter-wrapper .brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3.5rem;
+}
+
+.latest-news {
+  padding: 5rem 0;
+}
+.latest-news .latest-news-wrapper {
+  padding-top: 1.5rem;
+}
+.latest-news .latest-news-wrapper .sub-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #309255;
+  margin-bottom: 20px;
+}
+.latest-news .latest-news-wrapper .main-title {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+.latest-news .latest-news-wrapper .main-title span {
+  color: #309255;
+  position: relative;
+}
+.latest-news .latest-news-wrapper .main-title span::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/shape-4.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 121px;
+  height: 13px;
+  right: 0;
+  bottom: -11px;
+}
+.latest-news .latest-news-wrapper .latest-news-content .single-courses .course-btn span {
+  font-size: 1rem !important;
+  padding: 0.6rem 0.875rem !important;
+}
+
+.subscribe {
+  background-color: #e7f8ee;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+.subscribe .footer-widget {
+  margin-top: 3rem;
+}
+.subscribe .footer-widget .widget-logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: "all 0.3s ease 0s";
+  outline: "0";
+}
+.subscribe .footer-widget .widget-address {
+  margin-top: 27px;
+}
+.subscribe .footer-widget .widget-address .footer-widget-title {
+  color: #212832;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+.subscribe .footer-widget .widget-address p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #309255;
+  margin-top: 6px;
+}
+.subscribe .footer-widget .widget-info {
+  padding-top: 25px;
+}
+.subscribe .footer-widget .widget-info li p {
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+.subscribe .footer-widget .widget-info li p i {
+  font-size: 20px;
+  color: #309255;
+}
+.subscribe .footer-widget .widget-info li p a {
+  text-decoration: none;
+  color: #212832 !important;
+  color: inherit;
+  margin-top: 3px;
+  margin-left: 15px;
+  transition: all 0.3s ease 0s;
+  outline: 0;
+}
+.subscribe .footer-widget .widget-social {
+  display: flex;
+  padding-top: 1.25rem;
+}
+.subscribe .footer-widget .widget-social li {
+  margin-right: 1.25rem;
+}
+.subscribe .footer-widget .widget-social li a {
+  font-size: 20px;
+  color: #212832;
+}
+.subscribe .footer-widget .widget-subscribe {
+  padding-top: 36px;
+}
+.subscribe .footer-widget .widget-subscribe p {
+  color: #212832;
+  font-size: 15px;
+}
+.subscribe .footer-widget .widget-subscribe .widget-form input {
+  width: 100%;
+  height: 55px;
+  padding: 0 30px;
+  border: 1px solid rgba(48, 146, 85, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  color: #212832;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+}
+.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn {
+  background-color: #309255;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.4s, background-color 0.4s;
+  outline: none;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  padding: 17px 27px;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  /* Pseudo-element for bubble effect */
+  /* On hover, the bubble will expand */
+}
+.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn:active {
+  transform: translateY(3px);
+}
+.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::after, .subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::before {
+  border-radius: 3px;
+}
+.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
+}
+.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::after {
+  background-color: #1a1a1a;
+}
+.subscribe .footer-widget-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subscribe .footer-widget-link .footer-widget {
+  width: 50%;
+  margin-top: 3rem;
+}
+.subscribe .footer-widget-link .footer-widget .footer-widget-title {
+  color: #212832;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+.subscribe .footer-widget-link .footer-widget .widget-link {
+  padding-top: 26px;
+}
+.subscribe .footer-widget-link .footer-widget .widget-link li {
+  margin-top: 0.9rem;
+}
+.subscribe .footer-widget-link .footer-widget .widget-link li a {
+  color: #212832;
+  transition: all 0.3s ease 0s;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer-copyright {
+  background-color: #212832;
+}
+.footer-copyright .copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+.footer-copyright .copyright-wrapper .copyright-link {
+  padding-top: 15px;
+}
+.footer-copyright .copyright-wrapper .copyright-link a {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+}
+.footer-copyright .copyright-wrapper .copyright-link a::before {
+  content: "*";
+  font-size: 15px;
+  color: #a6afba;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.footer-copyright .copyright-wrapper .copyright-text {
+  padding-top: 20px;
+}
+.footer-copyright .copyright-wrapper .copyright-text p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer-copyright .copyright-wrapper .copyright-text p span {
+  color: #309255;
+  text-transform: uppercase;
+}
+.footer-copyright .copyright-wrapper .copyright-text p i {
+  color: red;
+}
+.footer-copyright .copyright-wrapper .copyright-text p a {
+  color: #309255;
+  transition: all 0.3s ease 0s;
+  font-weight: 500;
+}/*# sourceMappingURL=styles.css.map */
