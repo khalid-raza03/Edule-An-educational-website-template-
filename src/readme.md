@@ -10,15 +10,19 @@ Edule, a responsive Educational website landinng page **HTML, Sass, and Bootstra
 - Well optimised with google insight techniques
 
 ## Demo  
-👉 [Live Preview](https://your-github-pages-link)  
+👉 [Live Preview](https://khalid-raza03.github.io/edule-landing-page/)  
+
+## Screenshots
+![Project Screenshot](./screenshots/demo.png)
 
 ## Technologies  
 - HTML5  
 - Sass (SCSS)  
 - Bootstrap 5  
+- swiper js
 - Vanilla JavaScript  
 
-## Installation  
+## Installation in local 
 1. Clone the repo:  
    ```bash
    git clone https://github.com/your-username/repo.git
