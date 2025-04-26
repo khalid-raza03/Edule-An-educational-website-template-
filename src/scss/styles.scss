@@ -59,17 +59,98 @@ a {
   background-color: $eduleBg;
 }
 
+
+
+.header-nav.dark.active {
+  background: linear-gradient(177deg, #309255, #1e1e1e);
+}
+
+.section.dark {
+  background-color: #000000 !important;
+}
+
+.section.dark .nav-link {
+  color: #ffffff;
+}
+
+.section.dark span,
+.section.dark h3,
+.section.dark p,
+.title a {
+  color: white !important;
+}
+
+.section.dark .slides-edule span,
+.edule-course-category.dark .course-tabs,
+.edule-course-category.dark  .courses-price-review,
+.be-instructor.dark .instructor-wrapper,
+.how-it-works.dark  .edule-work,
+.supporters.dark .supporter-wrapper {
+  background-color: #000000 !important;
+}
+
+
+
+
+
+.section.dark .be-instructor .instructor-wrapper {
+  border: 1px solid $eduleBorder;
+}
+
+.section.dark .slides-edule span:hover,
+.section.dark .slides-edule span.active {
+  color: #309255 !important;
+  border-color: #ffffff !important;
+}
+
+.subscribe.dark a {
+  color: #ffffff !important;
+}
+
+.subscribe.dark h4 {
+  color: #309255 !important;
+}
+
+
 //header section
 .main-nav {
   position: relative;
   transform: translateY(3rem);
   z-index: 99;
+  padding-bottom: 20px;
   transition: transform 0.5s ease-in-out;
 
   .navbar {
     border: 1px solid $eduleBorder;
     padding: 16px 25px;
     border-radius: 0.9rem;
+
+
+    .dark-mode-box {
+      position: relative;
+
+      .off {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .on {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
+
+    .dark-mode-box.turn-on .off {
+      opacity: 0;
+    }
+
+    .dark-mode-box.turn-on .on {
+      opacity: 1;
+    }
+
+
     .nav-btn {
       border: 1px solid $eduleColor1;
       padding: 1rem 1.5rem;
@@ -128,14 +209,18 @@ a {
   transform: translateY(0);
   width: 100%;
   border-radius: 0;
-  background-color: $secondaryColor; /* White background for visibility */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-  border: none; /* Removes border */
+  background-color: inherit;
+  /* White background for visibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Adds a subtle shadow */
+  border: none;
+  /* Removes border */
   transition: transform 0.5s ease-in-out;
   animation: sticky 0.7s forwards;
 
   .navbar {
     border: none;
+
   }
 }
 
@@ -222,12 +307,13 @@ a {
 
 //mobile menu design
 
-.offcanvas-backdrop{
+.offcanvas-backdrop {
   background-color: transparent !important;
 }
 
 .mobile-menu-edule {
   max-width: 300px;
+
   .mobile-menu-body {
     padding: 3rem 1.7rem 1.7rem 1.7rem;
 
@@ -235,6 +321,7 @@ a {
       a {
         font-size: map-get($font-sizes, small);
       }
+
       .fa-solid {
         font-size: map-get($font-sizes, standard);
       }
@@ -325,7 +412,8 @@ a {
     position: absolute;
     bottom: 15%;
     left: 5vw;
-    .play{
+
+    .play {
       position: absolute;
       left: 50%;
       top: 50%;
@@ -343,6 +431,7 @@ a {
     span {
       font-size: map-get($font-sizes, standard);
     }
+
     h3 {
       font-size: map-get($font-sizes, large);
       font-weight: map-get($font-weights, medium);
@@ -370,6 +459,7 @@ a {
         }
       }
     }
+
     p {
       font-size: map-get($font-sizes, standard);
       margin-top: 3.5rem;
@@ -405,6 +495,7 @@ a {
       transform: translateX(0);
     }
   }
+
   .edule-courses-home {
     position: absolute;
     top: 38%;
@@ -446,17 +537,17 @@ a {
       width: 140px;
       height: 140px;
       text-align: center;
-      background-color: $secondaryColor;
+      background-color: #309255;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
 
-      .count {
+      .count{
         font-size: 30px;
         font-weight: 500;
-        color: $eduleColor1;
+        color:#ffffff;
 
         i {
           color: #ffa200;
@@ -464,8 +555,9 @@ a {
           display: inline-block;
         }
       }
+
       p {
-        color: #52565b;
+        color:#eefbf3;
         margin-bottom: 0;
         font-size: 14px;
       }
@@ -475,6 +567,7 @@ a {
       margin-top: 45px;
       padding-right: 30px;
     }
+
     .animation-up {
       animation: up 5s linear 0s infinite normal forwards;
     }
@@ -483,22 +576,25 @@ a {
       0% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-2rem);
       }
+
       100% {
         transform: translateY(0);
       }
     }
   }
 
- 
+
 }
 
 //edule catgeory section
 
 .edule-course-category,
 .latest-news {
+
   .edule-title,
   .edule-title span {
     font-size: map-get($font-sizes, medium);
@@ -508,6 +604,7 @@ a {
   .edule-title {
     span {
       position: relative;
+
       &::before {
         position: absolute;
         content: "";
@@ -556,6 +653,7 @@ a {
       border: 0;
       font-size: 1rem;
       color: $eduleColor1;
+
       i {
         background-color: $secondaryColor;
         color: $eduleColor1;
@@ -564,7 +662,7 @@ a {
   }
 
   .course-btn {
-    span {
+    a {
       text-align: center;
       color: $eduleColor1;
       border: 1px solid $eduleColor1;
@@ -674,7 +772,7 @@ a {
 
       .single-courses {
         margin-top: 30px;
-        border: 1px solid rgba(48, 146, 85, 0.2);
+        border: 1px solid $eduleBorder;
         border-radius: 15px;
         padding: 20px;
         -webkit-transition: all 0.3s ease 0s;
@@ -888,6 +986,7 @@ a {
     border-radius: 10px;
     padding: 35px 100px 70px;
     position: relative;
+    border: 1px solid $eduleBorder;
 
     .shape-12 {
       bottom: 30px;
@@ -973,9 +1072,11 @@ a {
 
 .how-it-works {
   padding: 80px 0;
+
   .container {
     width: 100% !important;
   }
+
   .sub-title {
     font-size: 20px;
     font-weight: 500;
@@ -1023,6 +1124,7 @@ a {
       border-radius: 10px;
       background-color: #e7f8ee;
       padding: 2.4rem;
+      border: 1px solid $eduleBorder;
       margin-top: 30px;
       overflow: hidden;
       position: relative;
@@ -1037,6 +1139,7 @@ a {
 
       .work-icon {
         text-align: left;
+
         i {
           width: 65px;
           height: 65px;
@@ -1063,6 +1166,7 @@ a {
           color: #212832;
           margin-bottom: 0;
         }
+
         p {
           font-size: 14px;
           color: #696969;
@@ -1147,6 +1251,7 @@ a {
       top: 40%;
       left: 50%;
     }
+
     @keyframes right {
       0% {
         transform: translateX(0);
@@ -1160,6 +1265,7 @@ a {
         transform: translateX(0);
       }
     }
+
     .animation-right {
       animation: right 5s linear 0s infinite normal forwards;
     }
@@ -1225,18 +1331,22 @@ a {
 //feedback-section
 
 .feedbacks {
+
   //pre-defined styles for swiper
   .swiper {
     width: 100%;
+
     .swiper-wrapper {
       display: flex;
       width: 100%;
+
       .swiper-slide {
         text-align: center;
         font-size: 18px;
         display: block;
         justify-content: center;
         align-items: center;
+        border: 1px solid $eduleBorder;
       }
     }
   }
@@ -1246,6 +1356,7 @@ a {
     position: relative;
     overflow: hidden;
     margin-top: 2rem;
+
     .testimonials {
       text-align: center;
       border: 1px solid rgba(48, 146, 85, 0.2);
@@ -1262,6 +1373,7 @@ a {
         .author-thumb {
           position: relative;
           margin-bottom: 0.5rem;
+
           img {
             display: block;
             width: 90px;
@@ -1270,6 +1382,7 @@ a {
             padding: 8px;
             margin: 0 auto;
           }
+
           i {
             width: 30px;
             height: 30px;
@@ -1320,6 +1433,7 @@ a {
       .testimonial-content {
         padding-top: 15px;
         max-width: 100%;
+
         p {
           font-size: 15px;
           color: #52565b;
@@ -1360,6 +1474,7 @@ a {
         -webkit-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
       }
+
       .swiper-pagination-bullet.swiper-pagination-bullet-active {
         background-color: #309255;
       }
@@ -1390,6 +1505,7 @@ a {
 
     .section-title {
       padding-bottom: 0.7rem;
+
       .main-title {
         font-size: 35px;
         font-weight: 500;
@@ -1430,14 +1546,17 @@ a {
 
 .latest-news {
   padding: 5rem 0;
+
   .latest-news-wrapper {
     padding-top: 1.5rem;
+
     .sub-title {
       font-size: 20px;
       font-weight: 500;
       color: #309255;
       margin-bottom: 20px;
     }
+
     .main-title {
       font-size: 35px;
       font-weight: 500;
@@ -1560,20 +1679,20 @@ a {
       }
     }
 
-    .widget-subscribe{
+    .widget-subscribe {
       padding-top: 36px;
 
-      p{
+      p {
         color: #212832;
         font-size: 15px;
       }
 
-      .widget-form{
-        input{
+      .widget-form {
+        input {
           width: 100%;
           height: 55px;
           padding: 0 30px;
-          border: 1px solid rgba(48,146,85,0.2);
+          border: 1px solid rgba(48, 146, 85, 0.2);
           border-radius: 10px;
           background-color: $secondaryColor;
           color: #212832;
@@ -1582,14 +1701,14 @@ a {
           outline: none;
         }
 
-        .subscribe-btn{
+        .subscribe-btn {
           background-color: $eduleColor1;
           color: white;
           border: none;
           cursor: pointer;
           @include home-btn;
           @include material-bubble;
-  
+
           &::after {
             background-color: lighten($mainColor, 10%);
           }
@@ -1618,6 +1737,7 @@ a {
 
         li {
           margin-top: 0.9rem;
+
           a {
             color: #212832;
             transition: all 0.3s ease 0s;
@@ -1633,26 +1753,26 @@ a {
 
 //footer section
 
-.footer-copyright{
+.footer-copyright {
   background-color: #212832;
 
-  .copyright-wrapper{
+  .copyright-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 15px;
     padding-top: 5px;
 
-    .copyright-link{
+    .copyright-link {
       padding-top: 15px;
 
-      a{
+      a {
         font-weight: 400;
         font-size: 14px;
         color: #fff;
         position: relative;
 
-        &::before{
+        &::before {
           content: "*";
           font-size: 15px;
           color: #a6afba;
@@ -1662,24 +1782,24 @@ a {
       }
     }
 
-    .copyright-text{
+    .copyright-text {
       padding-top: 20px;
 
-      p{
+      p {
         color: #fff;
         font-size: 14px;
         font-weight: 400;
 
-        span{
+        span {
           color: #309255;
           text-transform: uppercase;
         }
 
-        i{
+        i {
           color: red;
         }
 
-        a{
+        a {
           color: #309255;
           transition: all 0.3s ease 0s;
           font-weight: 500;
