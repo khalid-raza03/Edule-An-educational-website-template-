@@ -149,10 +149,10 @@ var swiper = new Swiper(".brandSwiper", {
     },
 
     992: {
-      slidesPerView: 5, // Medium screens (tablets, etc.)
+      slidesPerView: 5, // Medium screens (tablets,ipads etc.)
     },
     768: {
-      slidesPerView: 4, // Smaller screens (mobile)
+      slidesPerView: 4, // Smaller screens 
     },
     568: {
       slidesPerView: 3, // Smaller screens (mobile)
@@ -168,7 +168,7 @@ var swiper = new Swiper(".brandSwiper", {
 });
 
 var darkModeBtn = document.getElementById("darkMode");
-var sections = document.querySelectorAll(".section"); // easier
+var sections = document.querySelectorAll(".section"); 
 
 darkModeBtn.addEventListener("click", () => {
   darkModeBtn.classList.toggle("turn-on");

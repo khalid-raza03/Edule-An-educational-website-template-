@@ -57,6 +57,12 @@ h6 {
   box-shadow: none !important;
 }
 
+@media screen and (max-width: 576px) {
+  .navbar-brand img {
+    width: 130px;
+    height: 35px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .nav-txt {
     font-size: 0.875rem !important;
@@ -388,11 +394,12 @@ a {
 }
 
 .header-nav.dark.active {
-  background: linear-gradient(177deg, #309255, #1e1e1e);
+  background: linear-gradient(270deg, #309255, #e2dddd);
 }
 
 .section.dark {
   background-color: #000000 !important;
+  border-bottom: 1px solid rgba(80, 197, 127, 0.6117647059);
 }
 
 .section.dark .nav-link {
@@ -599,8 +606,30 @@ a {
   margin-left: 6px;
 }
 
-.offcanvas-backdrop {
-  background-color: transparent !important;
+.offcanvas {
+  background: linear-gradient(270deg, #309255, #e2dddd);
+}
+.offcanvas .dark-mode-box {
+  position: relative;
+}
+.offcanvas .dark-mode-box .off {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.offcanvas .dark-mode-box .on {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.offcanvas .dark-mode-box.turn-on .off {
+  opacity: 0;
+}
+.offcanvas .dark-mode-box.turn-on .on {
+  opacity: 1;
+}
+.offcanvas .accordion-txt {
+  color: #444 !important;
 }
 
 .mobile-menu-edule {
@@ -633,7 +662,7 @@ a {
 }
 .mobile-menu-edule .mobile-menu-body .edule-accordion .accordion,
 .mobile-menu-edule .mobile-menu-body .edule-accordion .accordion-static {
-  background-color: #fff;
+  background: transparent;
   color: #444;
   cursor: pointer;
   padding: 0.9rem 0.5rem 0rem 1.2rem;
@@ -656,8 +685,7 @@ a {
   content: "−";
 }
 .mobile-menu-edule .mobile-menu-body .edule-accordion .panel {
-  padding: 0 18px;
-  background-color: #fff;
+  padding: 5px 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease-in-out;
@@ -1498,6 +1526,7 @@ a {
   font-weight: 500;
   margin-bottom: 0;
   line-height: 1.4;
+  color: gray;
 }
 .be-instructor .instructor-wrapper .left-box .main-title span {
   color: #309255;
@@ -1584,6 +1613,7 @@ a {
   font-weight: 500;
   margin-bottom: 0;
   line-height: 1.4;
+  color: gray;
 }
 .how-it-works .main-title span {
   color: #309255;
@@ -1759,6 +1789,7 @@ a {
 }
 .feedbacks .main-title {
   font-size: 35px;
+  color: gray;
   font-weight: 500;
   margin-bottom: 0;
   line-height: 1.4;
@@ -1937,6 +1968,7 @@ a {
 }
 .supporters .supporter-wrapper .section-title .main-title {
   font-size: 35px;
+  color: gray;
   font-weight: 500;
   margin-bottom: 0;
   line-height: 1.4;
@@ -1982,6 +2014,7 @@ a {
   font-weight: 500;
   margin-bottom: 0;
   line-height: 1.4;
+  color: gray;
 }
 .latest-news .latest-news-wrapper .main-title span {
   color: #309255;
@@ -2050,7 +2083,6 @@ a {
 }
 .subscribe .footer-widget .widget-info li p a {
   text-decoration: none;
-  color: #212832 !important;
   color: inherit;
   margin-top: 3px;
   margin-left: 15px;

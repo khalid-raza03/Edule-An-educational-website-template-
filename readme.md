@@ -5,8 +5,8 @@
 ## Features  
 - fully responsive design 
 - Sass-powered styling  
-- Bootstrap components  
-- swiper js for sliders
+- component based design  
+- dark mode    
 - Well optimised with google insight techniques
 
 ## Demo  

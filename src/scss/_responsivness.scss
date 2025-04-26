@@ -26,6 +26,15 @@
 
 //navbar responsive
 
+@media screen and (max-width:576px) {
+   .navbar-brand {
+    img {
+      width: 130px;
+      height: 35px;
+    }
+   }
+}
+
 @media screen and (max-width: 1200px) {
   .nav-txt {
     font-size: 0.875rem !important;

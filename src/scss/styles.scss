@@ -63,12 +63,14 @@ a {
 //dark mode feature customisations
 
 .header-nav.dark.active {
-  background: linear-gradient(177deg, #309255, #1e1e1e);
+  background: linear-gradient(270deg, #309255, #e2dddd);
 }
 
 .section.dark {
   background-color: #000000 !important;
+  border-bottom: 1px solid $eduleBorder;
 }
+
 
 .section.dark .nav-link {
   color: #ffffff;
@@ -303,10 +305,39 @@ a {
   }
 }
 
-//mobile menu design
 
-.offcanvas-backdrop {
-  background-color: transparent !important;
+.offcanvas{
+
+  background: linear-gradient(270deg, #309255, #e2dddd);
+
+  .dark-mode-box {
+    position: relative;
+
+    .off {
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .on {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  .dark-mode-box.turn-on .off {
+    opacity: 0;
+  }
+
+  .dark-mode-box.turn-on .on {
+    opacity: 1;
+  }
+.accordion-txt{
+  color:#444 !important;
+}
+  
+
 }
 
 .mobile-menu-edule {
@@ -345,7 +376,7 @@ a {
 
       .accordion,
       .accordion-static {
-        background-color: $secondaryColor;
+        background:transparent;
         color: #444;
         cursor: pointer;
         padding: 0.9rem 0.5rem 0rem 1.2rem;
@@ -371,8 +402,8 @@ a {
       }
 
       .panel {
-        padding: 0 18px;
-        background-color: $secondaryColor;
+        padding: 5px 18px;
+
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.6s ease-in-out;
@@ -1023,6 +1054,7 @@ a {
         font-weight: 500;
         margin-bottom: 0;
         line-height: 1.4;
+        color: gray;
 
         span {
           color: #309255;
@@ -1087,6 +1119,7 @@ a {
     font-weight: 500;
     margin-bottom: 0;
     line-height: 1.4;
+    color: gray;
 
     span {
       color: #309255;
@@ -1236,7 +1269,7 @@ a {
       }
 
       .main-title {
-        color: #fff;
+        color:#fff;
         font-size: 35px;
         font-weight: 500;
         margin-bottom: 0;
@@ -1302,6 +1335,7 @@ a {
 
   .main-title {
     font-size: 35px;
+    color: gray;
     font-weight: 500;
     margin-bottom: 0;
     line-height: 1.4;
@@ -1506,6 +1540,7 @@ a {
 
       .main-title {
         font-size: 35px;
+        color: gray;
         font-weight: 500;
         margin-bottom: 0;
         line-height: 1.4;
@@ -1560,6 +1595,7 @@ a {
       font-weight: 500;
       margin-bottom: 0;
       line-height: 1.4;
+      color: gray;
 
       span {
         color: #309255;
@@ -1652,7 +1688,6 @@ a {
 
           a {
             text-decoration: none;
-            color: #212832 !important;
             color: inherit;
             margin-top: 3px;
             margin-left: 15px;
