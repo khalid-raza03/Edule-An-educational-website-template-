@@ -62,6 +62,10 @@ var swiper = new Swiper(".eduleSwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
   loop:true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     1200: {
       slidesPerView: 5, // large screens (tablets, etc.)
@@ -109,6 +113,10 @@ document.getElementById("defaultOpen").click();
 var swiper = new Swiper(".feedbackSwiper", {
   slidesPerView: 2,
   spaceBetween: 40,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -134,6 +142,10 @@ var swiper = new Swiper(".brandSwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
   loop:true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     1200: {
       slidesPerView: 5, // large screens (tablets, etc.)
