@@ -60,6 +60,7 @@ a {
 }
 
 
+//dark mode feature customisations
 
 .header-nav.dark.active {
   background: linear-gradient(177deg, #309255, #1e1e1e);
@@ -82,15 +83,12 @@ a {
 
 .section.dark .slides-edule span,
 .edule-course-category.dark .course-tabs,
-.edule-course-category.dark  .courses-price-review,
+.edule-course-category.dark .courses-price-review,
 .be-instructor.dark .instructor-wrapper,
-.how-it-works.dark  .edule-work,
+.how-it-works.dark .edule-work,
 .supporters.dark .supporter-wrapper {
   background-color: #000000 !important;
 }
-
-
-
 
 
 .section.dark .be-instructor .instructor-wrapper {
@@ -544,10 +542,10 @@ a {
       align-items: center;
       margin: 0 auto;
 
-      .count{
+      .count {
         font-size: 30px;
         font-weight: 500;
-        color:#ffffff;
+        color: #ffffff;
 
         i {
           color: #ffa200;
@@ -557,7 +555,7 @@ a {
       }
 
       p {
-        color:#eefbf3;
+        color: #eefbf3;
         margin-bottom: 0;
         font-size: 14px;
       }

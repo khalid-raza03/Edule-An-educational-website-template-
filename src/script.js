@@ -19,20 +19,18 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
 //onscroll navbar function
 var onscrollNav = document.getElementById("onScrollNavBar");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY >80) {
+  if (window.scrollY > 80) {
     onscrollNav.classList.add("active");
   } else {
     onscrollNav.classList.remove("active");
   }
 });
 
-
-//edule accordion script 
+//edule accordion script
 var acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {
@@ -44,7 +42,7 @@ for (let i = 0; i < acc.length; i++) {
         acc[j].nextElementSibling.style.maxHeight = null;
       }
     }
-    
+
     // Toggle the clicked accordion
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
@@ -56,12 +54,11 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 
-
 //course slider
 var swiper = new Swiper(".eduleSwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
-  loop:true,
+  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -121,9 +118,9 @@ var swiper = new Swiper(".feedbackSwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints:{
+  breakpoints: {
     992: {
-      slidesPerView: 2, 
+      slidesPerView: 2,
     },
     576: {
       slidesPerView: 1, // Adjust for small screens
@@ -131,9 +128,9 @@ var swiper = new Swiper(".feedbackSwiper", {
     },
     320: {
       slidesPerView: 1,
-      spaceBetween: 10, // Reduce spacing for very small screens 
+      spaceBetween: 10, // Reduce spacing for very small screens
     },
-  }
+  },
 });
 
 //brands slider
@@ -141,7 +138,7 @@ var swiper = new Swiper(".feedbackSwiper", {
 var swiper = new Swiper(".brandSwiper", {
   slidesPerView: 5,
   spaceBetween: 30,
-  loop:true,
+  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -170,16 +167,13 @@ var swiper = new Swiper(".brandSwiper", {
   },
 });
 
+var darkModeBtn = document.getElementById("darkMode");
+var sections = document.querySelectorAll(".section"); // easier
 
+darkModeBtn.addEventListener("click", () => {
+  darkModeBtn.classList.toggle("turn-on");
 
-var darkModeBtn = document.getElementById('darkMode');
-var sections = document.querySelectorAll('.section'); // easier
-
-darkModeBtn.addEventListener('click', () => {
-  darkModeBtn.classList.toggle('turn-on');
-  
-  sections.forEach(section => {
-    section.classList.toggle('dark');
+  sections.forEach((section) => {
+    section.classList.toggle("dark");
   });
 });
-
