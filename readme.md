@@ -27,6 +27,6 @@
 1. __Clone the repo:__  
 
    ```bash
-   git clone https://github.com/your-username/repo.git
+   git clone https://github.com/khalid-raza03/edule-landing-page.git
    ```
 2. Open `index.html` in a browser.  
