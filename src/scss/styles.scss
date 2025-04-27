@@ -150,6 +150,17 @@ a {
       opacity: 1;
     }
 
+    .sign-in{
+      transition: border 0.4s ease-in-out, color 0.4s ease-in-out;
+      border: 1px solid transparent;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+
+      &:hover{
+        border: 1px solid #309255;
+        color: #309255;
+      }
+    }
 
     .nav-btn {
       border: 1px solid $eduleColor1;
@@ -160,7 +171,7 @@ a {
 
       &:hover {
         background-color: $eduleColor1;
-        color: $secondaryColor;
+        color: $secondaryColor !important;
       }
     }
 
@@ -364,7 +375,7 @@ a {
 
         &:hover {
           background-color: $eduleColor1;
-          color: $secondaryColor;
+          color: $secondaryColor !important;
         }
       }
     }

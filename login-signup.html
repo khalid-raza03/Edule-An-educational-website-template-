@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edule User Registration</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .my-form-wrapper {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        background:
+            linear-gradient(120deg, #47ea833b, rgba(255, 255, 255, 0.308)),
+            url('./src/images/login-bg.jpeg') no-repeat center center / cover;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 500px;
+        height: 480px;
+        margin: 1em;
+        perspective: 1500px;
+    }
+
+    .card .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+    }
+
+    .my-form-wrapper .card .more {
+        display: none;
+    }
+
+    .my-form-wrapper .card .more:checked~.content {
+        transform: rotateY(180deg);
+    }
+
+    .my-form-wrapper .front,
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        border-radius: 6px;
+    }
+
+    .my-form-wrapper .front .inner,
+    .my-form-wrapper .back .inner {
+        height: 100%;
+        display: grid;
+        padding: 1.5em;
+        transform: translateZ(80px) scale(0.94);
+    }
+
+
+
+    .my-form-wrapper .form-content {
+        padding-top: 5%;
+    }
+
+    .my-form-wrapper .form-content .SignInForm {
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .my-form-wrapper .form-content .head-wrapper {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    margin-bottom: 7%;
+    }
+
+    .my-form-wrapper .form-content .head-wrapper .login-signup-box{
+        display: flex;
+        gap: 60px;
+    }
+
+
+    .my-form-wrapper .form-content .head-wrapper .button-signIn {
+
+        padding: 0.75rem 2rem;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(8px);
+        transition: transform 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .my-form-wrapper .form-content .head-wrapper .button-signIn:hover {
+        transform: translateY(-3px);
+
+
+    }
+
+    .my-form-wrapper .head-wrapper h2,
+    .my-form-wrapper .head-wrapper label {
+        cursor: pointer;
+        padding: 8px 18px;
+        border-radius: 6px;
+        transition: background 0.4s ease-in-out, color 0.4s ease-in;
+    }
+
+    .my-form-wrapper .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .my-form-wrapper .form-group a {
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        color: white;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .my-form-wrapper .form-group a:hover {
+        color: #09760d;
+    }
+
+    .my-form-wrapper .form-content .form-group label {
+        position: absolute;
+        top: 14px;
+        left: 12px;
+        background-color: transparent;
+        padding: 0 4px;
+        color: #aaa;
+        font-size: 0.9rem;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+
+    .my-form-wrapper input[type="text"],
+    .my-form-wrapper input[type="email"],
+    .my-form-wrapper input[type="password"] {
+        width: 100%;
+        padding: 14px 12px 6px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .my-form-wrapper input[type="text"]:focus,
+    .my-form-wrapper input[type="email"]:focus,
+    .my-form-wrapper input[type="password"]:focus {
+        border-color: #1dcb23;
+        box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+    }
+
+    .my-form-wrapper input[type="text"]:focus+label,
+    .my-form-wrapper input[type="email"]:focus+label,
+    .my-form-wrapper input[type="password"]:focus+label,
+    .my-form-wrapper input:not(:placeholder-shown)+label {
+        top: -14px;
+        left: -2px;
+        color: #ffffff;
+        font-size: 0.75rem;
+    }
+
+    .my-form-wrapper .form-content button {
+        background-color: #1dcb23;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 100%;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .my-form-wrapper .form-content button:hover {
+        background-color: #45a049;
+        box-shadow: 0 4px 10px rgba(69, 160, 73, 0.3);
+    }
+
+    .my-form-wrapper .front {
+        background-color: #fff;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .my-form-wrapper .front:after,
+    .back:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 6px;
+        backface-visibility: hidden;
+    }
+
+    .my-form-wrapper .front:after {
+        background: linear-gradient(40deg, #ebece7b3, #40df45);
+    }
+
+
+    .my-form-wrapper .back:after {
+        background: linear-gradient(140deg, #6d36cab3, #ebece7b3);
+    }
+
+    .my-form-wrapper .front .inner {
+        grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
+        justify-items: center;
+    }
+
+    .my-form-wrapper .front h2 {
+        grid-row: 2;
+        margin-bottom: 0.3em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #fff;
+        font-weight: 500;
+    }
+
+
+
+    .my-form-wrapper .card .back {
+        transform: rotateY(180deg);
+        background-color: #fff;
+        border: 2px solid #f0f0f0;
+    }
+
+    .my-form-wrapper .card .back .inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .my-form-wrapper .card .back .info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: #355cc9;
+        grid-row: 3;
+    }
+
+    .my-form-wrapper .card .back .info:not(:first-of-type):before {
+        content: "";
+        position: absolute;
+        left: -0.9em;
+        height: 18px;
+        width: 1px;
+        background-color: #ccc;
+    }
+
+    .my-form-wrapper .card .back .info span {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    .my-form-wrapper .card .back .info i {
+        font-size: 1.2em;
+    }
+
+    .my-form-wrapper .card .back .info i:before {
+        background: linear-gradient(40deg, #355cc9, #438af3);
+        -webkit-text-fill-color: transparent;
+    }
+
+    .my-form-wrapper .card .back .info .icon {
+        margin-left: 0.3em;
+    }
+
+    .my-form-wrapper .card .back .info .icon span {
+        display: block;
+        margin-top: -0.25em;
+        font-size: 0.8em;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .my-form-wrapper .card .back .description {
+        grid-row: 5;
+        grid-column: 1/-1;
+        font-size: 0.86em;
+        border-radius: 5px;
+        font-weight: 600;
+        line-height: 1.4em;
+        overflow: auto;
+        color: #355cc9;
+        padding-right: 10px;
+    }
+
+    .my-form-wrapper .card .back .location,
+    .back .price {
+        font-weight: 600;
+        color: #355cc9;
+        grid-row: 1;
+        font-size: 0.86em;
+    }
+
+    .my-form-wrapper .card .back .location {
+        grid-column: 1/3;
+        justify-self: left;
+    }
+
+    .my-form-wrapper .card .back .price {
+        grid-column: 3/-1;
+        justify-self: right;
+    }
+
+    .my-form-wrapper .card .back .button {
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+
+    .my-form-wrapper .head-wrapper .button {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        cursor: pointer;
+        display: block;
+        background: transparent;
+        border: solid 2px #11f419;
+        color: #11f419;
+        border-radius: 12px;
+        padding: 12px 32px;
+        text-align: center;
+        backface-visibility: hidden;
+        transition: box-shadow 0.3s ease-in, background 0.2s ease-in;
+    }
+
+
+    .my-form-wrapper .head-wrapper .button:hover {
+        background: #11f419;
+        box-shadow: 0 0 10px rgba(240, 238, 238, 0.5);
+        text-shadow: none;
+        color: #ffffff;
+    }
+
+
+
+
+    @media screen and (max-width:576px) {
+        .my-form-wrapper .head-wrapper .button {
+            padding: 12px 20px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="my-form-wrapper">
+        <div class="card">
+            <input type="checkbox" id="card1" class="more" aria-hidden="true">
+            <div class="content">
+                <div class="front" style="background-image: url('./src/images/login-bg.jpeg');">
+                    <div class="inner">
+
+                        <div class="form-content">
+                            <div class="head-wrapper">
+                                <div class="logo">
+
+                                    <a href="./index.html"><img src="./src/images/logo.webp" alt="edule-img"></a>
+                                </div>
+                                <div class="login-signup-box">
+                                    <label id="signUp" for="card1" class="button" aria-hidden="true"
+                                    style="color: #ffffff; border:2px solid #ffffff;">Sign up</label>
+                                <label id="signIn" class="button-signIn" aria-hidden="true">Sign In</label>
+
+                                </div>
+                               
+                            </div>
+
+                            <form class="SignInForm" id="SignInForm" action="register.php" method="post">
+                            
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Email</label>
+                                    <span id="emailError" class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" name="password" placeholder=" " required>
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="form-group">
+                                    <a href="#">Forgot Password ?</a>
+                                </div>
+                                <button type="submit"> Sign In</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url('./src/images/login-bg.jpeg');">
+                    <div class="inner">
+
+                        <div class="form-content">
+                            <div class="head-wrapper">
+                                <div class="logo">
+
+                                    <a href="./index.html"><img src="./src/images/logo.webp" alt="edule-img"></a>
+                                </div>
+
+                                <div class="login-signup-box">
+
+                                    
+                                    <label id="signUp" for="card1" class="button return" aria-hidden="true"
+                                    style="color: #ffffff; border: 2px solid #ffffff;">Sign In</label>
+                                    <label id="signIn" class="button-signIn" aria-hidden="true">Sign Up</label>
+                                </div>
+
+                            </div>
+
+                            <form class="SignInForm" id="SignInForm" action="register.php" method="post">
+                                <div class="form-group">
+                                    <input type="text" id="username" name="username" placeholder=" " required>
+                                    <label for="username">Username</label>
+                                    <span id="usernameError" class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Email</label>
+                                    <span id="emailError" class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" name="password" placeholder=" " required>
+                                    <label for="password">Password</label>
+                                </div>
+                                <button type="submit"> Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

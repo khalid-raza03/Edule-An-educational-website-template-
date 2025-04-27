@@ -471,6 +471,16 @@ a {
 .main-nav .navbar .dark-mode-box.turn-on .on {
   opacity: 1;
 }
+.main-nav .navbar .sign-in {
+  transition: border 0.4s ease-in-out, color 0.4s ease-in-out;
+  border: 1px solid transparent;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.main-nav .navbar .sign-in:hover {
+  border: 1px solid #309255;
+  color: #309255;
+}
 .main-nav .navbar .nav-btn {
   border: 1px solid #309255;
   padding: 1rem 1.5rem;
@@ -480,7 +490,7 @@ a {
 }
 .main-nav .navbar .nav-btn:hover {
   background-color: #309255;
-  color: #fff;
+  color: #fff !important;
 }
 .main-nav .navbar .nav-center {
   display: flex;
@@ -653,7 +663,7 @@ a {
 }
 .mobile-menu-edule .mobile-menu-body .navbar-nav .nav-btn:hover {
   background-color: #309255;
-  color: #fff;
+  color: #fff !important;
 }
 .mobile-menu-edule .mobile-menu-body .edule-accordion {
   margin-top: 1.5rem;
