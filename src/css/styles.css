@@ -533,11 +533,8 @@ a {
   width: 100%;
   border-radius: 0;
   background-color: inherit;
-  /* White background for visibility */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Adds a subtle shadow */
   border: none;
-  /* Removes border */
   transition: transform 0.5s ease-in-out;
   animation: sticky 0.7s forwards;
 }
