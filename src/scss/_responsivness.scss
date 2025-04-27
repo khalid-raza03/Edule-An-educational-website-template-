@@ -114,6 +114,10 @@
 }
 
 @media screen and (max-width: 767px) {
+
+  .offcanvas{
+    width: 75%;
+  }
   .edule-video {
     bottom: -3% !important;
     left: -5% !important;

@@ -168,6 +168,7 @@ a {
     .nav-btn {
       border: 1px solid $eduleColor1;
       padding: 1rem 1.5rem;
+      color: #000000 ;
       border-radius: 0.5rem;
       background-color: $secondaryColor;
       transition: all 0.3s ease-in-out;
@@ -319,7 +320,9 @@ a {
 
 .offcanvas{
 
-  background: linear-gradient(270deg, #309255, #e2dddd);
+  max-width: 500px;
+  width: 100%;
+  background: linear-gradient(0deg, #309255, #e2dddd);
 
   .dark-mode-box {
     position: relative;
@@ -352,7 +355,6 @@ a {
 }
 
 .mobile-menu-edule {
-  max-width: 300px;
 
   .mobile-menu-body {
     padding: 3rem 1.7rem 1.7rem 1.7rem;

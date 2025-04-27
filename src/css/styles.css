@@ -129,6 +129,9 @@ h6 {
   }
 }
 @media screen and (max-width: 767px) {
+  .offcanvas {
+    width: 75%;
+  }
   .edule-video {
     bottom: -3% !important;
     left: -5% !important;
@@ -484,6 +487,7 @@ a {
 .main-nav .navbar .nav-btn {
   border: 1px solid #309255;
   padding: 1rem 1.5rem;
+  color: #000000;
   border-radius: 0.5rem;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
@@ -614,7 +618,9 @@ a {
 }
 
 .offcanvas {
-  background: linear-gradient(270deg, #309255, #e2dddd);
+  max-width: 500px;
+  width: 100%;
+  background: linear-gradient(0deg, #309255, #e2dddd);
 }
 .offcanvas .dark-mode-box {
   position: relative;
@@ -639,9 +645,6 @@ a {
   color: #444 !important;
 }
 
-.mobile-menu-edule {
-  max-width: 300px;
-}
 .mobile-menu-edule .mobile-menu-body {
   padding: 3rem 1.7rem 1.7rem 1.7rem;
 }
