@@ -66,9 +66,14 @@ a {
   background: linear-gradient(270deg, #309255, #e2dddd);
 }
 
+.section{
+  transition:padding 0.9s ease-in-out, background-color 0.6s ease-in-out;
+}
+
 .section.dark {
   background-color: #000000 !important;
   border-bottom: 1px solid $eduleBorder;
+  padding-bottom: 20px;
 }
 
 
