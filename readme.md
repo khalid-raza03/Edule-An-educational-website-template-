@@ -6,7 +6,7 @@
 - fully responsive design 
 - Sass-powered styling  
 - component based design  
-- dark mode    
+- dark mode switch   
 - Well optimised with google insight techniques
 
 ## Demo  
