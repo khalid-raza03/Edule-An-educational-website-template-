@@ -167,13 +167,17 @@ var swiper = new Swiper(".brandSwiper", {
   },
 });
 
-var darkModeBtn = document.getElementById("darkMode");
-var sections = document.querySelectorAll(".section"); 
 
-darkModeBtn.addEventListener("click", () => {
-  darkModeBtn.classList.toggle("turn-on");
+//dark mode toggle
+document.addEventListener("DOMContentLoaded", function() {
+  var darkModeBtn = document.getElementById("darkMode");
+  var sections = document.querySelectorAll(".section"); 
 
-  sections.forEach((section) => {
-    section.classList.toggle("dark");
+  darkModeBtn.addEventListener("click", () => {
+    darkModeBtn.classList.toggle("turn-on");
+
+    sections.forEach((section) => {
+      section.classList.toggle("dark");
+    });
   });
 });

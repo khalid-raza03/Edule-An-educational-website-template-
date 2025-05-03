@@ -130,7 +130,7 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .offcanvas {
-    width: 75%;
+    width: 75% !important;
   }
   .edule-video {
     bottom: -3% !important;
@@ -147,55 +147,6 @@ h6 {
     color: #ffa200;
     transform: translateX(-50%) translateY(-50%);
     display: inline-block;
-  }
-}
-@media screen and (max-width: 576px) {
-  .edule-home .home-text-content h3 span::before {
-    width: 147px !important;
-    left: 75% !important;
-  }
-  .edule-home .edule-rating-box .box-rating {
-    width: 100px !important;
-    height: 100px !important;
-  }
-  .edule-home .edule-rating-box .box-rating .count {
-    font-size: 1.25rem !important;
-  }
-  .edule-home .edule-rating-box .box-rating p {
-    font-size: 0.75rem !important;
-  }
-  .edule-courses-home {
-    top: unset !important;
-    bottom: 0% !important;
-    left: 2% !important;
-  }
-  .edule-home .edule-courses-home .edule-courses-home-content {
-    height: 100px !important;
-    width: 100px !important;
-  }
-  .edule-home .edule-courses-home .edule-courses-home-content span {
-    font-size: 1rem !important;
-  }
-  .edule-home .home-text-content {
-    padding: 35px !important;
-  }
-  .edule-home .home-text-content h3,
-  .edule-home .home-text-content h3 span {
-    font-size: 1.5rem !important;
-  }
-  .edule-home .home-text-content h3::before,
-  .edule-home .home-text-content h3 span::before {
-    transform: translateX(-80%) !important;
-  }
-  .edule-home .home-text-content p {
-    font-size: 0.8rem !important;
-  }
-  .edule-rating-box {
-    top: 15% !important;
-    right: 15% !important;
-  }
-  .edule-title, .edule-title span {
-    font-size: 1.7rem !important;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -280,7 +231,62 @@ h6 {
     text-align: center;
   }
 }
+@media screen and (max-width: 576px) {
+  .download-app-wrapper .section-title .main-title {
+    font-size: 21px !important;
+  }
+  .edule-home .home-text-content h3 span::before {
+    width: 147px !important;
+    left: 75% !important;
+  }
+  .edule-home .edule-rating-box .box-rating {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .edule-home .edule-rating-box .box-rating .count {
+    font-size: 1.25rem !important;
+  }
+  .edule-home .edule-rating-box .box-rating p {
+    font-size: 0.75rem !important;
+  }
+  .edule-courses-home {
+    top: unset !important;
+    bottom: 0% !important;
+    left: 2% !important;
+  }
+  .edule-home .edule-courses-home .edule-courses-home-content {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .edule-home .edule-courses-home .edule-courses-home-content span {
+    font-size: 1rem !important;
+  }
+  .edule-home .home-text-content {
+    padding: 35px !important;
+  }
+  .edule-home .home-text-content h3,
+  .edule-home .home-text-content h3 span {
+    font-size: 1.5rem !important;
+  }
+  .edule-home .home-text-content h3::before,
+  .edule-home .home-text-content h3 span::before {
+    transform: translateX(-80%) !important;
+  }
+  .edule-home .home-text-content p {
+    font-size: 0.8rem !important;
+  }
+  .edule-rating-box {
+    top: 15% !important;
+    right: 15% !important;
+  }
+  .edule-title, .edule-title span {
+    font-size: 1.7rem !important;
+  }
+}
 @media screen and (max-width: 462px) {
+  .mobile-menu-edule .mobile-menu-body {
+    padding: 3rem 1.2rem 1.7rem 1.2rem !important;
+  }
   .home-btn,
   .drop-info-btn {
     font-size: 0.8rem !important;
@@ -300,7 +306,8 @@ h6 {
     transform: translateX(-75%) !important;
   }
   .download-section .download-app-wrapper .download-app-btn .app-btn a {
-    width: 140px !important;
+    width: 122px !important;
+    height: 50px !important;
   }
   .main-title {
     font-size: 1.5rem !important;
