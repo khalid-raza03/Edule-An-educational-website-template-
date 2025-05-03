@@ -420,6 +420,10 @@ a {
   color: #ffffff;
 }
 
+.section.dark .sign-in:hover {
+  color: #fff !important;
+}
+
 .section.dark span,
 .section.dark h3,
 .section.dark p,
