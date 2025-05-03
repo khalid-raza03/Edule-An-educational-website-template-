@@ -116,7 +116,7 @@
 @media screen and (max-width: 767px) {
 
   .offcanvas{
-    width: 75% !important;
+    width: 85% !important;
   }
   .edule-video {
     bottom: -3% !important;
@@ -307,6 +307,11 @@
 // btns
 
 @media screen and (max-width: 462px) {
+
+  .navbar-brand img {
+    width: 100px;
+    height: 27px;
+}
 
   .mobile-menu-edule .mobile-menu-body {
     padding: 3rem 1.2rem 1.7rem 1.2rem !important;

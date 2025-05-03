@@ -87,7 +87,7 @@ a {
 .section.dark span,
 .section.dark h3,
 .section.dark p,
-.title a {
+.section.dark .title a {
   color: white !important;
 }
 
@@ -962,6 +962,7 @@ a {
             justify-content: space-between;
             -webkit-box-align: center;
             -ms-flex-align: center;
+            gap: 10px;
             align-items: center;
             margin-top: 20px;
 
