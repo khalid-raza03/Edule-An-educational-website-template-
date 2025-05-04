@@ -26,6 +26,18 @@ html {
 }
 
 //common styles for all elements
+.edule-theme-btn {
+  background-color: $eduleColor1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  @include home-btn;
+  @include material-bubble;
+
+  &::after {
+    background-color: lighten($mainColor, 10%);
+  }
+}
 
 ol,
 ul {
@@ -1756,18 +1768,7 @@ a {
           outline: none;
         }
 
-        .subscribe-btn {
-          background-color: $eduleColor1;
-          color: white;
-          border: none;
-          cursor: pointer;
-          @include home-btn;
-          @include material-bubble;
-
-          &::after {
-            background-color: lighten($mainColor, 10%);
-          }
-        }
+       
       }
     }
   }

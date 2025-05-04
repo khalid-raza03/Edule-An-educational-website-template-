@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edule Courses</title>
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+
+    <!-- for icons  -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css">
+
+    <!-- swiper js for sliders  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<style>
+    .course-header {
+        background-color: #eefbf3;
+        padding: 50px 0;
+        position: relative;
+    }
+
+    .section.dark .home-link {
+        color: #eefbf3 !important;
+    }
+
+    .course-header .img-box img {
+        border-radius: 50%;
+    }
+
+    @keyframes left {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-2.5rem);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .course-header .animation-3 {
+        position: absolute;
+        top: 20%;
+        right: 30%;
+        animation: left 4s linear 0s infinite normal forwards;
+    }
+
+    @keyframes rotatefull {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .course-header .animation-1 {
+        left: 5%;
+        top: 55%;
+        position: absolute;
+        animation: rotatefull 8s linear infinite;
+    }
+
+
+    .edule-course-category .course-tabs {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0 !important;
+        margin: 0 !important;
+        gap: 40px;
+        background-color: transparent;
+
+    }
+
+    .edule-course-category .category-wrapper {
+        padding: 15px;
+        border-radius: 6px;
+        background-color: #eefbf3;
+    }
+
+    .section.dark .category-wrapper {
+        background-color: #000;
+        border: 1px solid #309255;
+    }
+
+
+
+    .section.dark .tabs-edule span {
+        background-color: transparent !important;
+        color: #eefbf3 !important;
+    }
+
+    .edule-course-category .course-tabs .tabs-edule {
+        border: 2px solid #309255;
+        cursor: pointer;
+        max-width: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: #000;
+        border-radius: 6px;
+        padding: 7px 2px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .edule-course-category .course-tabs .tabs-edule:hover {
+        background-color: #309255;
+        color: #eefbf3;
+    }
+
+    .edule-course-category .course-tabs .tabs-edule.active {
+        background-color: #309255;
+        color: #eefbf3;
+    }
+
+    @media screen and (max-width:1200px) {
+
+        .course-details-wrapper .instructors .rating-box {
+            padding: 50px 5px;
+        }
+    }
+
+    @media screen and (max-width:992px) {
+        .edule-course-category .category-wrapper .row {
+            flex-direction: column-reverse !important;
+        }
+
+    }
+
+
+    @media screen and (min-width:576px) and (max-width:767px) {
+        .container {
+            max-width: 650px !important;
+        }
+    }
+
+
+
+    @media screen and (max-width:576px) {
+        .course-tabs {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem !important;
+        }
+
+        .edule-course-category .category-wrapper .row {
+            row-gap: 1rem !important;
+        }
+
+        .course-header .img-box img {
+            width: 75%;
+        }
+
+        .course-header .animation-3 {
+            right: 15%;
+            top: 15%;
+
+        }
+    }
+
+
+    @media screen and (max-width:376px) {
+        .course-header .img-box {
+            padding-top: 30px;
+        }
+    }
+
+    .course-details-wrapper .desc-txt {
+        margin-bottom: 0;
+        margin-top: 15px;
+        color: #52565b;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.8rem;
+        text-align: justify;
+    }
+
+    .course-details-wrapper .share-course{
+        margin-top: 50px;
+    }
+
+    .course-details-wrapper .share-course .socials{
+        margin-top: 25px;
+    }
+
+    .course-details-wrapper .instructors .content-txt {
+        margin-bottom: 0;
+        margin-top: 15px;
+        color: #8d8f90;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.8rem;
+    }
+
+    .course-details-wrapper .instructors .rating-box {
+        padding: 50px 25px;
+    }
+
+    .course-details-wrapper .instructors .ratings {
+        padding: 10px 0;
+    }
+
+    .course-details-wrapper {
+        padding-top: 50px;
+    }
+
+
+    .course-details .course-preview .circle-shape {
+        position: absolute;
+        left: 40%;
+        top: 40%;
+    }
+
+    .course-details .course-preview .fa-play {
+        position: absolute;
+        left: 45%;
+        top: 50%;
+    }
+
+    .course-details .course-preview .course-category-btn {
+        position: absolute;
+        left: 3%;
+        top: 90%;
+        padding: 5px 18px;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+    }
+
+
+    .course-details .course-preview img {
+        border-radius: 12px;
+    }
+
+    .course-details .course-preview-head {
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+
+    .course-details-wrapper .course-info-card {
+        background-color: #e7f8ee;
+        padding: 30px 30px 40px;
+        border: 1px solid #30925533;
+        border-radius: 10px;
+    }
+
+    .course-details-wrapper .course-info-card .course-info-btn {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+
+    <!-- go to top button -->
+    <button class="border" onclick="topFunction()" id="eduleScrollBtn" title="Go to top"><i
+            class="fa-solid fa-angle-up"></i></button>
+    <header class="edule-header section pb-5">
+        <!-- top nav -->
+        <div class="top-nav">
+            <nav class="navbar navbar-expand-lg  d-none d-lg-flex">
+                <div class="container gx-0">
+                    <button name="toggler-button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        navbar toggler button
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link active text-white nav-txt" aria-current="page" href="#">All course
+                                    28% off for
+                                    <span class="text-white" href="#">Liberian
+                                        people’s.</span></a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link nav-txt" href="#"><img src="src/images/shape-1.webp" alt="edule-img"
+                                        width="41" height="14"></a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link text-white nav-txt" href="#"><i
+                                        class="fa-solid fa-phone-volume text-white pe-1"></i>
+                                    (077) 123-456</a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link text-white nav-txt" href="#"><i
+                                        class="fa-solid fa-envelope text-white pe-1"></i>
+                                    address@gmail.com</a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link nav-txt" href="#"><img src="src/images/shape-2.webp" alt="edule-img"
+                                        width="41" height="14"></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a title="social-links" class="nav-link text-white nav-txt" href="#"><i
+                                        class="socials fa-brands fa-facebook fs-5"></i><i
+                                        class="socials fa-brands fa-twitter px-3 fs-5"></i><i
+                                        class="socials fa-brands fa-skype fs-5"></i><i
+                                        class="socials fa-brands fa-instagram ps-3 fs-5"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="offcanvas offcanvas-start mobile-menu-edule" tabindex="-1" id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel">
+            <div class="offcanvas-header p-4">
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mobile-menu-body">
+
+                <ul class="navbar-nav text-center">
+
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark nav-txt" href="#"><i
+                                class="fa-solid fa-phone-volume text-white pe-2"></i>
+                            (077) 123-456</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark nav-txt" href="#"><i
+                                class="fa-solid fa-envelope text-white pe-2"></i>
+                            address@gmail.com</a>
+                    </li>
+
+                    <li class="nav-item mt-3">
+                        <a class="nav-link " href="./login-signup.html"><button class=" nav-btn"> Sign
+                                In</button> <button class="ms-4 nav-btn ">
+                                Sign
+                                Up</button></a>
+                    </li>
+
+                </ul>
+
+                <!-- Accordion -->
+                <div class="edule-accordion position-relative">
+                    <button class="accordion-static pb-3">Home</button>
+                    <button class="accordion">All Courses</button>
+                    <div class="panel">
+                        <p class="accordion-txt">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+
+                    <button class="accordion">Pages</button>
+                    <div class="panel">
+                        <p class="accordion-txt">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+
+                    <button class="accordion">Blog</button>
+                    <div class="panel">
+                        <p class="accordion-txt">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+                    <button class="accordion-static pb-3">Contact</button>
+                </div>
+
+                <div class="mobile-menu-social ">
+                    <a class="nav-link text-dark  nav-txt" href="#"><i class="fa-brands fa-facebook fs-5"></i><i
+                            class="fa-brands fa-twitter px-3 fs-5"></i><i class="fa-brands fa-skype fs-5"></i><i
+                            class="fa-brands fa-instagram ps-3 fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- main and onscroll navbar -->
+        <section id="onScrollNavBar" class="section  header-nav main-nav border-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="src/images/logo.webp"
+                                srcset="src/images/logo-2x.webp 2x, src/images/logo-3x.webp 3x" width="178" height="44"
+                                alt="EduLe Logo">
+                        </a>
+
+                        <div class="collapse navbar-collapse nav-center d-none d-lg-flex" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active me-2 position-relative home" aria-current="page"
+                                    href="#">Home</a>
+                                <menu>
+                                    <li class="position-relative d-inline-block dropdown-list">
+                                        <a href class="nav-link  me-2">Courses</a>
+                                        <ul class="edule-dropdown">
+                                            <li><a href>Course</a></li>
+                                            <li><a href>Courses
+                                                    Details</a></li>
+                                        </ul>
+                                    </li>
+                                </menu>
+
+                                <menu>
+                                    <li class="position-relative d-inline-block dropdown-list">
+                                        <a href class="nav-link  me-2">Pages</a>
+                                        <ul class="edule-dropdown">
+                                            <li><a href>About</a></li>
+                                            <li><a href>Register</a></li>
+                                            <li><a href>Login</a></li>
+                                            <li><a href>FAQ</a></li>
+                                            <li><a href>404 ERROR</a></li>
+                                            <li><a href>After
+                                                    Enroll</a></li>
+                                            <li><a href>Instructor
+                                                    Dashboard</a></li>
+                                            <li><a href>Instructor
+                                                    Dashboard</a></li>
+                                            <li><a href>Students</a></li>
+                                            <li><a href>Reviews</a></li>
+                                            <li><a href>Course
+                                                    Engagment</a></li>
+
+                                        </ul>
+                                    </li>
+                                </menu>
+
+                                <menu>
+                                    <li class="position-relative d-inline-block dropdown-list">
+                                        <a href class="nav-link">Blog</a>
+                                        <ul class="edule-dropdown">
+                                            <!-- sub-dropdown-1 -->
+                                            <li class="position-relative  dropdown-sub-list text-center" loading="lazy">
+                                                <a href class=" me-2">Blog
+                                                </a>
+                                                <ul class="edule-sub-dropdown-1">
+                                                    <li><a href>Blog Post
+                                                            1</a></li>
+                                                    <li><a href>Blog Post
+                                                            1</a></li>
+                                                    <li><a href>Blog Post
+                                                            1</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- sub-dropdown-2 -->
+                                            <li class="position-relative  dropdown-sub-list text-center" loading="lazy">
+                                                <a href class=" me-2">Blog
+                                                    Deatils </a>
+                                                <ul class="edule-sub-dropdown-1 custom-align">
+                                                    <li><a href>Blog
+                                                            details</a></li>
+                                                    <li><a href>Blog
+                                                            details</a></li>
+                                                    <li><a href>Blog
+                                                            details</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </menu>
+
+                                <a class="nav-link " href="#">Contacts</a>
+                            </div>
+                        </div>
+                        <a target="_blank" class="nav-link sign-in ms-auto d-none d-lg-block"
+                            href="./login-signup.html"> Sign In
+                        </a>
+                        <a class="ms-2 nav-btn d-none d-lg-block text-dark" target="_blank" href="./login-signup.html"
+                            class="text-dark ms-3 nav-btn"> Sign
+                            Up</a>
+
+                        <li id="darkMode" class="dark-mode-box  nav-link mt-3 ">
+                            <button class="border-0 bg-transparent mb-2 ms-2">
+                                <img class="off" src="./src/images/darkMode-off.svg" alt="darkMode-off">
+                                <img class="on " src="./src/images/dark-mode-on.svg" alt="dark-mode-on">
+                            </button>
+
+                        </li>
+
+                        <button class="navbar-toggler  d-lg-none d-inline toggle-bar" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+                            aria-controls="navbarOffcanvasLg">
+                            <i class="fa-solid fa-bars text-success fs-4"></i>
+                        </button>
+                    </div>
+
+                </nav>
+            </div>
+
+        </section>
+    </header>
+
+    <section class="course-header pb-5 section">
+        <div class="animation-1 d-none d-lg-block">
+            <img src="src/images/shape-8.webp" alt="edule-img" class="mw-100">
+        </div>
+
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-md-6 col-12 d-flex">
+                    <div class="d-flex flex-column align-items-start gap-4 ">
+                        <div class="top">
+                            <a class="text-decoration-none text-dark home-link" href="#">Home /</a> <a
+                                class="text-decoration-none text-success" href="#"> Courses</a>
+                        </div>
+                        <div class="bottom">
+                            <h3 class="fs-2 fw-bold">
+                                My <span class="text-success">Courses
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 d-flex justify-content-end">
+                    <div class="img-box">
+                        <img src="./src/images/author-11.webp" alt>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="animation-3" src="src/images/shape-5.webp" alt="edule-img">
+    </section>
+
+    <div class="course-details-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12 d-flex flex-column">
+                    <section class="course-details">
+
+                        <div class="course-preview position-relative">
+                            <img class="img-fluid w-100" src="./src/images/courses-details.webp" alt="course-preview">
+                            <a href="#" target="_blank" rel="noopener noreferrer"> <img class="circle-shape"
+                                    src="./src/images/circle-shape.webp" alt="play-circle"></a>
+                            <i class="fa-solid fa-play fs-3 text-white"></i>
+                            <a href="#" class="bg-warning text-white rounded course-category-btn">Finance</a>
+                        </div>
+                        <p class="course-preview-head text-wrap">
+                            Finance & Investment Series: Learn to Budget and
+                            Calculate Your Net Worth.
+                        </p>
+
+                    </section>
+
+                    <!-- My courses -->
+                    <section class="section edule-course-category bg-white pt-5 pb-5">
+
+                        <div class="category-wrapper">
+                            <div class="row  row-gap-5 ">
+                                <div class="col">
+                                    <div class="course-tabs">
+
+                                        <div class=" tabs-edule">
+                                            <span id="defaultOpen" class="tablinks"
+                                                onclick="openCourse(event, 'desc')">Description
+                                            </span>
+                                        </div>
+
+                                        <div class=" tabs-edule">
+                                            <span class="tablinks" onclick="openCourse(event, 'Instructor')">Instrcutors
+                                            </span>
+                                        </div>
+                                        <div class=" tabs-edule">
+                                            <span class="tablinks" onclick="openCourse(event, 'reviews')">Reviews</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="course-tab-content">
+                            <div id="desc" class="tabcontent w-100">
+                                <div class="Course-desc">
+                                    <h3 class="fs-3 fw-bold text-body-secondary my-2">Description:
+                                    </h3>
+                                    <p class="desc-txt">
+
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem
+                                        Ipsum has been
+                                        the industry's standard dummy text
+                                        ever since the 1500s when an unknown
+                                        printer
+                                        took a galley of
+                                        type and scrambled it to make a type
+                                        specimen book.
+
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem
+                                        Ipsum has been
+                                        the industry's standard dummy text
+                                        ever since the 1500s when an unknown
+                                        printer
+                                        took a galley of
+                                        type and scrambled it to make a type
+                                        specimen book. It has survived not
+                                        only
+                                        five centuries, but
+                                        also the leap into electronic
+                                        typesetting, remaining essentially
+                                        unchanged. It
+                                        was popularsed in
+                                        the 1960 with release containing
+                                        Lorem Ipsum passages desktop
+                                        publishing
+                                        software.
+                                    </p>
+
+                                    <h3 class="fs-3 fw-bold text-body-secondary my-2">Curriculum:
+                                    </h3>
+                                     <p class="desc-txt">
+                                        Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting
+                                    industry. Lorem
+                                    Ipsum has been
+                                    the industry's standard dummy text
+                                    ever since the 1500s when an unknown
+                                    printer
+                                    took a galley of
+                                    type and scrambled it to make a type
+                                    specimen book. It has survived not
+                                    only
+                                    five centuries, but
+                                    also the leap into electronic
+                                    typesetting, remaining essentially
+                                    unchanged. It
+                                    was popularsed in
+                                    the 1960 with release containing
+                                    Lorem Ipsum passages desktop
+                                    publishing
+                                    software.
+                                     </p>
+
+                                    <h3 class="fs-3 fw-bold text-body-secondary my-2">Certification:
+                                    </h3>
+                                     <p class="desc-txt">
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem
+                                        Ipsum has been
+                                        the industry's standard dummy text
+                                        ever since the 1500s when an unknown
+                                        printer
+                                        took a galley of
+                                        type and scrambled it to make a type
+                                        specimen book. It has survived not
+                                        only
+                                        five centuries, but
+                                        also the leap into electronic
+                                        typesetting, remaining essentially
+                                        unchanged. It
+                                        was popularsed in
+                                        the 1960 with release containing
+                                        Lorem Ipsum passages desktop
+                                        publishing
+                                        software.
+                                     </p>
+                                </div>
+                            </div>
+
+                            <div id="Instructor" class="tabcontent w-100">
+                                <div class="instructors d-flex flex-column gap-4">
+                                    <div class="content-header">
+                                        <h3 class="fw-bold fs-3 ">Course
+                                            Instructor :</h3>
+                                    </div>
+                                    <div class="content-box d-flex justify-content-between">
+                                        <div class="content d-flex flex-column align-items-center">
+                                            <div class="img-box p-2 rounded-circle border mb-2">
+                                                <img width="130" height="130" class="img-fluid rounded-circle"
+                                                    src="./src/images/author-01.webp" alt>
+                                            </div>
+                                            <div class="ratings d-flex gap-1">
+                                                4.5 <i class="fa-solid fa-star text-warning"></i>
+                                                (rating)</div>
+                                            <p class="author-name mb-0 fw-bold mb-2">Jason
+                                                colon</p>
+                                            <span class="designation text-success">MBA,
+                                                Instructor</span>
+                                        </div>
+                                        <div class="content d-flex flex-column align-items-center">
+                                            <div class="img-box p-2 rounded-circle border mb-2">
+                                                <img width="130" height="130" class="img-fluid rounded-circle"
+                                                    src="./src/images/author-02.webp" alt>
+                                            </div>
+                                            <div class="ratings d-flex gap-1">
+                                                4.5 <i class="fa-solid fa-star text-warning"></i>
+                                                (rating)</div>
+                                            <p class="author-name mb-0 fw-bold mb-2">Robin
+                                                gomez</p>
+                                            <span class="designation text-success">MBA,
+                                                Instructor</span>
+                                        </div>
+                                        <div class="content d-flex flex-column align-items-center">
+                                            <div class="img-box p-2 rounded-circle border mb-2">
+                                                <img width="130" height="130" class="img-fluid rounded-circle"
+                                                    src="./src/images/author-11.webp" alt>
+                                            </div>
+                                            <div class="ratings d-flex gap-1">
+                                                4.5 <i class="fa-solid fa-star text-warning"></i>
+                                                (rating)</div>
+                                            <p class="author-name mb-0 fw-bold mb-2">Analisa
+                                                crown</p>
+                                            <span class="designation text-success">MBA,
+                                                Instructor</span>
+                                        </div>
+                                        <div class="content d-flex flex-column align-items-center">
+                                            <div class="img-box p-2 rounded-circle border mb-2">
+                                                <img width="130" height="130" class="img-fluid rounded-circle"
+                                                    src="./src/images/author-04.webp" alt>
+                                            </div>
+                                            <div class="ratings d-flex gap-1">
+                                                4.5 <i class="fa-solid fa-star text-warning"></i>
+                                                (rating)</div>
+                                            <p class="author-name mb-0 fw-bold mb-2">Liza
+                                            </p>
+                                            <span class="designation text-success">MBA,
+                                                Instructor</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 ">
+                                        <div class="col-6">
+                                            <div class="rating-txt">
+                                                <h3 class="content-head fs-3 mb-3 fw-bold">Rating
+                                                    : </h3>
+                                                <p class="content-txt mb-0 text-justify">
+                                                    Lorem Ipsum is
+                                                    simply dummy text of
+                                                    printing and
+                                                    typesetting
+                                                    industry. Lorem
+                                                    Ipsum
+                                                    has been the i
+                                                    dustry's standard
+                                                    dummy text ever
+                                                    since the 1500
+                                                    unknown printer
+                                                    took
+                                                    a galley of type.
+                                                </p>
+                                                <p class="content-txt mb-0 text-justify">
+
+
+                                                    Lorem Ipsum is
+                                                    simply dummy text of
+                                                    printing and
+                                                    typesetting
+                                                    industry text ever
+                                                    since
+
+
+                                                </p>
+                                                <p class="content-txt mb-0 text-justify">
+                                                    Lorem Ipsum is
+                                                    simply dummy text of
+                                                    printing and
+                                                    dustry's
+                                                    standard dummy text
+                                                    ever
+                                                    since the 1500
+                                                    unknown printer took
+                                                    a galley of type
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="rating-box  d-flex flex-column align-items-center border">
+                                                <div class="content-head fs-3">
+                                                    4.0 <i class="fa-solid fa-star fs-5 text-warning"></i>
+                                                </div>
+                                                <p class="content-sub-head text-body-secondary mb-3">
+                                                    Rating (86K+)
+                                                </p>
+
+                                                <div
+                                                    class="ratings d-flex justify-content-between align-items-center w-100 ">
+
+                                                    <span class="rating-star position-relative" style="color: #e9ecef;">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar position-absolute " style="width: 80%;
+                                        top: -2px;
+                                        left: 0;
+                                        height: 100%;
+                                        overflow: hidden;">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                    <p class="bg-body-secondary position-relative mb-0"
+                                                        style="height:3px; width: 60%;">
+                                                        <span class="position-absolute bg-success"
+                                                            style="height: 3px; width:85%;">
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="ratings d-flex justify-content-between align-items-center w-100 ">
+
+                                                    <span class="rating-star position-relative" style="color: #e9ecef;">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar position-absolute " style="width: 50%;
+                                        top: -2px;
+                                        left: 0;
+                                        height: 100%;
+                                        overflow: hidden;">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                    <p class="bg-body-secondary position-relative mb-0"
+                                                        style="height:3px; width: 60%;">
+                                                        <span class="position-absolute bg-success"
+                                                            style="height: 3px; width:50%;">
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="ratings d-flex justify-content-between align-items-center w-100 ">
+
+                                                    <span class="rating-star  position-relative"
+                                                        style="color: #e9ecef;">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar position-absolute " style="width: 25%;
+                                        top: -2px;
+                                        left: 0;
+                                        height: 100%;
+                                        overflow: hidden;">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                    <p class="bg-body-secondary position-relative mb-0"
+                                                        style="height:3px; width: 60%;">
+                                                        <span class="position-absolute bg-success"
+                                                            style="height: 3px; width:25%;">
+                                                        </span>
+                                                    </p>
+                                                </div>
+
+                                                <div
+                                                    class="ratings d-flex justify-content-between align-items-center w-100 ">
+
+                                                    <span class="rating-star  position-relative"
+                                                        style="color: #e9ecef;">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar position-absolute " style="width: 75%;
+                                        top: -2px;
+                                        left: 0;
+                                        height: 100%;
+                                        overflow: hidden;">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                    <p class="bg-body-secondary position-relative mb-0"
+                                                        style="height:3px; width: 60%;">
+                                                        <span class="position-absolute bg-success"
+                                                            style="height: 3px; width:75%;">
+                                                        </span>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="reviews" class="tabcontent  feedbacks ">
+                                <div class="container  overflow-hidden
+                    ">
+                                    <div class="content-head ">
+                                        <h3 class="fs-3 fw-bold ">Student
+                                            Reviews :</h3>
+                                    </div>
+                                    <div class="swiper feedbackSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide testimonials">
+                                                <div class="testimonial-author">
+                                                    <div class="author-thumb">
+                                                        <img src="src/images/author-07.webp" alt="Author">
+
+                                                        <i class="fa-solid fa-quote-left"></i>
+                                                    </div>
+
+                                                    <span class="rating-star">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar" style="width: 80%">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <p>Lorem Ipsum has
+                                                        been the
+                                                        industry's
+                                                        standard dummy
+                                                        text since
+                                                        the 1500s, when
+                                                        an unknown
+                                                        printer took
+                                                        a galley of type
+                                                        and scrambled it
+                                                        to make type
+                                                        specimen book
+                                                        has survived
+                                                        not five
+                                                        centuries but
+                                                        also
+                                                        the leap into
+                                                        electronic.</p>
+                                                    <h4 class="name">Melissa
+                                                        Roberts</h4>
+                                                    <span class="designation">Product
+                                                        Designer,
+                                                        USA</span>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonials">
+                                                <div class="testimonial-author">
+                                                    <div class="author-thumb">
+                                                        <img src="src/images/author-07.webp" alt="Author">
+
+                                                        <i class="fa-solid fa-quote-left"></i>
+                                                    </div>
+
+                                                    <span class="rating-star">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar" style="width: 80%">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <p>Lorem Ipsum has
+                                                        been the
+                                                        industry's
+                                                        standard dummy
+                                                        text since
+                                                        the 1500s, when
+                                                        an unknown
+                                                        printer took
+                                                        a galley of type
+                                                        and scrambled it
+                                                        to make type
+                                                        specimen book
+                                                        has survived
+                                                        not five
+                                                        centuries but
+                                                        also
+                                                        the leap into
+                                                        electronic.</p>
+                                                    <h4 class="name">Melissa
+                                                        Roberts</h4>
+                                                    <span class="designation">Product
+                                                        Designer,
+                                                        USA</span>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonials">
+                                                <div class="testimonial-author">
+                                                    <div class="author-thumb">
+                                                        <img src="src/images/author-07.webp" alt="Author">
+
+                                                        <i class="fa-solid fa-quote-left"></i>
+                                                    </div>
+
+                                                    <span class="rating-star">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar" style="width: 80%">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <p>Lorem Ipsum has
+                                                        been the
+                                                        industry's
+                                                        standard dummy
+                                                        text since
+                                                        the 1500s, when
+                                                        an unknown
+                                                        printer took
+                                                        a galley of type
+                                                        and scrambled it
+                                                        to make type
+                                                        specimen book
+                                                        has survived
+                                                        not five
+                                                        centuries but
+                                                        also
+                                                        the leap into
+                                                        electronic.</p>
+                                                    <h4 class="name">Melissa
+                                                        Roberts</h4>
+                                                    <span class="designation">Product
+                                                        Designer,
+                                                        USA</span>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide testimonials">
+                                                <div class="testimonial-author">
+                                                    <div class="author-thumb">
+                                                        <img src="src/images/author-07.webp" alt="Author">
+
+                                                        <i class="fa-solid fa-quote-left"></i>
+                                                    </div>
+
+                                                    <span class="rating-star">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <span class="rating-bar" style="width: 80%">
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                            <i class="fa-solid fa-star text-warning"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <p>Lorem Ipsum has
+                                                        been the
+                                                        industry's
+                                                        standard dummy
+                                                        text since
+                                                        the 1500s, when
+                                                        an unknown
+                                                        printer took
+                                                        a galley of type
+                                                        and scrambled it
+                                                        to make type
+                                                        specimen book
+                                                        has survived
+                                                        not five
+                                                        centuries but
+                                                        also
+                                                        the leap into
+                                                        electronic.</p>
+                                                    <h4 class="name">Melissa
+                                                        Roberts</h4>
+                                                    <span class="designation">Product
+                                                        Designer,
+                                                        USA</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center align-items-center mt-3">
+
+                                        <button class="edule-theme-btn ">Write
+                                            A Review</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+                <div class="col-lg-4 col-12">
+
+                    <div class="course-info-card p-3">
+                        <div class="content-header py-3 d-flex justify-content-center">
+                            <h3 class="fs-3 text-success">$420.38 </h3>
+                        </div>
+                        <div class="d-flex justify-content-between border-top border-bottom py-3"> <span><i
+                                    class="fa-solid fa-chalkboard-user text-success pe-2"></i> Instructor</span>
+                            <p class="mb-0"> Pamela Foaster</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top border-bottom py-3"> <span><i
+                                    class="fa-solid fa-clock text-success pe-2"></i> Duration</span>
+                            <p class="mb-0"> 07 hrs 20min</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top border-bottom py-3"> <span><i
+                                    class="fa-solid fa-video text-success pe-2"></i> Lecture</span>
+                            <p class="mb-0"> 20</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top border-bottom py-3"> <span><i
+                                    class="fa-solid fa-chart-simple text-success pe-2"></i> Level</span>
+                            <p class="mb-0"> Medium</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top border-bottom py-3"> <span><i
+                                    class="fa-solid fa-book text-success pe-2"></i>Language</span>
+                            <p class="mb-0"> English</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top border-bottom py-3"> <span><i
+                                    class="fa-solid fa-id-card text-success pe-2"></i> Certificate</span>
+                            <p class="mb-0"> Yes</p>
+                        </div>
+
+                        <div class="course-info-btn">
+
+                            <a href="#" target="_blank" class="edule-theme-btn" rel="noopener noreferrer">Enroll Now</a>
+                        </div>
+
+
+                        
+                        </div>
+                        <div class="share-course">
+                            <h3 class="content-head fs-3 text-dark fw-bold">Share Course:</h3>
+                            <div class="socials d-flex justify-content-between">
+                                <i class="fa-brands fs-3 fa-facebook"></i>
+                                <i class="fa-brands fs-3 fa-instagram"></i>
+                                <i class="fa-brands fs-3 fa-twitter"></i>
+                                <i class="fa-brands fs-3 fa-linkedin"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- download our app section -->
+    <section class="section  download-section container-fluid section">
+
+        <div class="app-shape app-shape-1"></div>
+        <div class="app-shape app-shape-2"></div>
+        <div class="app-shape app-shape-3"></div>
+        <div class="app-shape app-shape-4"></div>
+
+        <div class="container">
+            <div class="download-app-wrapper mt-n6">
+
+                <div class="section-title section-title-white">
+                    <h5 class="sub-title">Ready to start?</h5>
+                    <h2 class="main-title">Download our mobile app. for
+                        easy to start your course.</h2>
+                </div>
+
+                <img class="shape-1 animation-right d-none d-lg-block" src="src/images/shape-14.webp" alt="Shape">
+
+                <div class="download-app-btn">
+                    <ul class="app-btn d-flex">
+                        <li class="me-4 pt-2 list-unstyled"><a href="#"><img class="mw-100"
+                                    src="src/images/google-play.webp" alt="Google Play"></a></li>
+                        <li class="pt-2 list-unstyled"><a href="#"><img class="mw-100" src="src/images/app-store.webp"
+                                    alt="App Store"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="section subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 order-md-1 order-lg-1">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#"><img src="src/images/logo.webp" alt="Logo" class="mw-100"></a>
+                        </div>
+
+                        <div class="widget-address">
+                            <h4 class="footer-widget-title">Caribbean
+                                Ct</h4>
+                            <p>Haymarket, Virginia (VA).</p>
+                        </div>
+
+                        <ul class="widget-info ps-0">
+                            <li>
+                                <p> <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:address@gmail.com">address@gmail.com</a>
+                                </p>
+                            </li>
+                            <li class="mt-2">
+                                <p> <i class="fa-solid fa-phone"></i> <a href="tel:9702621413">(970)
+                                        262-1413</a> </p>
+                            </li>
+                        </ul>
+
+                        <ul class="widget-social ps-0">
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-facebook"></i></a></li>
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-twitter"></i></a></li>
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-skype"></i></a></li>
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-md-3 order-lg-2">
+
+                    <div class="footer-widget-link">
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Category</h4>
+
+                            <ul class="widget-link">
+                                <li><a href="#">Creative
+                                        Writing</a></li>
+                                <li><a href="#">Film &amp;
+                                        Video</a></li>
+                                <li><a href="#">Graphic Design</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                                <li><a href="#">Business
+                                        Analytics</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Quick
+                                Links</h4>
+
+                            <ul class="widget-link">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Discussion</a></li>
+                                <li><a href="#">Terms &amp;
+                                        Conditions</a></li>
+                                <li><a href="#">Customer
+                                        Support</a></li>
+                                <li><a href="#">Course FAQ’s</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 order-md-2 order-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title fw-bold fs-5">Subscribe</h4>
+
+                        <div class="widget-subscribe">
+                            <p>Lorem Ipsum has been them an industry
+                                printer took a galley make book.</p>
+
+                            <div class="widget-form">
+                                <form action="#">
+                                    <input name="email here" type="text" placeholder="Email here">
+                                    <button class="edule-theme-btn">Subscribe
+                                        Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class=" section-footer">
+        <div class="footer-copyright section">
+            <div class="container">
+
+                <!-- Footer Copyright Start -->
+                <div class="copyright-wrapper">
+                    <div class="copyright-link">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                        <a href="#">Security</a>
+                    </div>
+                    <div class="copyright-text">
+                        <p>© 2025 <span> Edule </span> Made with <i class="fa-solid fa-heart"></i> by <a href="#">Khalid
+                                Raja</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Footer Copyright End -->
+
+            </div>
+        </div>
+    </footer>
+
+    <script async src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+        // review slider 
+
+        var swiper = new Swiper(".feedbackSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            },
+        });
+
+
+        //accordion script
+        var acc = document.getElementsByClassName("accordion");
+
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                // Close all accordions first
+                for (let j = 0; j < acc.length; j++) {
+                    if (acc[j] !== this) {
+                        acc[j].classList.remove("active");
+                        acc[j].nextElementSibling.style.maxHeight = null;
+                    }
+                }
+
+                // Toggle the clicked accordion
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+
+        //onscroll navbar function
+        var onscrollNav = document.getElementById("onScrollNavBar");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 80) {
+                onscrollNav.classList.add("active");
+            } else {
+                onscrollNav.classList.remove("active");
+            }
+        });
+
+        //dark mode toggler
+        document.addEventListener("DOMContentLoaded", function () {
+            var darkModeBtn = document.getElementById("darkMode");
+            var sections = document.querySelectorAll(".section");
+
+            darkModeBtn.addEventListener("click", () => {
+                darkModeBtn.classList.toggle("turn-on");
+
+                sections.forEach((section) => {
+                    section.classList.toggle("dark");
+                });
+            });
+        });
+
+        //scroll to top 
+        document.addEventListener("DOMContentLoaded", function () {
+            let mybutton = document.getElementById("eduleScrollBtn");
+
+            window.onscroll = function () {
+                if (
+                    document.body.scrollTop > 200 ||
+                    document.documentElement.scrollTop > 200
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            };
+        });
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        //tabs script
+        function openCourse(evt, courseName) {
+            var i, tabcontent, tablinks, slideContainers;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            slideContainers = document.querySelectorAll(".course-tabs .tabs-edule");
+            for (i = 0; i < slideContainers.length; i++) {
+                slideContainers[i].classList.remove("active");
+            }
+
+            document.getElementById(courseName).style.display = "block";
+
+            evt.currentTarget.className += " active";
+
+            evt.currentTarget.closest('.tabs-edule').classList.add("active");
+        }
+
+        // Initialize default tab
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("defaultOpen").click();
+        });
+    </script>
+</body>
+
+</html>

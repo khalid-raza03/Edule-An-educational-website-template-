@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -339,6 +339,53 @@ html {
 #eduleScrollBtn:hover {
   background-color: #52565b;
   color: #fff;
+}
+
+.edule-theme-btn {
+  background-color: #309255;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.5s, transform 0.4s, background-color 0.4s;
+  outline: none;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  padding: 17px 27px;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  /* Pseudo-element for bubble effect */
+  /* On hover, the bubble will expand */
+}
+.edule-theme-btn:active {
+  transform: translateY(3px);
+}
+.edule-theme-btn::after, .edule-theme-btn::before {
+  border-radius: 3px;
+}
+.edule-theme-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16rem;
+  height: 16rem;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
+}
+.edule-theme-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.edule-theme-btn::after {
+  background-color: #1a1a1a;
 }
 
 ol,
@@ -2150,52 +2197,6 @@ a {
   font-size: 15px;
   font-weight: 500;
   outline: none;
-}
-.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn {
-  background-color: #309255;
-  color: white;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  font-size: 1rem;
-  transition: color 0.5s, transform 0.4s, background-color 0.4s;
-  outline: none;
-  border-radius: 0.7rem;
-  margin-top: 1rem;
-  padding: 17px 27px;
-  overflow: hidden;
-  box-shadow: none;
-  position: relative;
-  z-index: 1;
-  /* Pseudo-element for bubble effect */
-  /* On hover, the bubble will expand */
-}
-.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn:active {
-  transform: translateY(3px);
-}
-.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::after, .subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::before {
-  border-radius: 3px;
-}
-.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16rem;
-  height: 16rem;
-  color: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  z-index: -1;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease, background-color 0.5s ease-in-out;
-}
-.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn:hover::after {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-.subscribe .footer-widget .widget-subscribe .widget-form .subscribe-btn::after {
-  background-color: #1a1a1a;
 }
 .subscribe .footer-widget-link {
   display: flex;
