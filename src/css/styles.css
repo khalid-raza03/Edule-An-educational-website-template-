@@ -1385,7 +1385,7 @@ a {
 .latest-news .latest-news-wrapper .tabcontent .single-courses .courses-content .courses-price-review,
 .latest-news .latest-news-wrapper .latest-news-content .single-courses .courses-content .courses-price-review {
   background-color: #fff;
-  padding: 15px 20px;
+  padding-top: 15px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
