@@ -247,7 +247,7 @@
 
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
         .course-details-wrapper .rating-content {
             flex-direction: column;
         }
@@ -264,6 +264,9 @@
 
 
     @media screen and (max-width:576px) {
+        .course-details-wrapper .course-details{
+            padding-bottom: 30px;
+        }
 
         .course-details .course-preview .course-category-btn {
             font-size: 14px;
@@ -416,12 +419,10 @@
                 <div class="edule-accordion position-relative">
                     <button class="accordion-static pb-3">Home</button>
                     <button class="accordion">All Courses</button>
-                    <div class="panel">
-                        <p class="accordion-txt">Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.</p>
-                    </div>
+                    <div class="panel d-flex flex-column align-items-start gap-3 ms-2">
+                        <a target="_blank" href="./courses.html" class="accordion-txt fw-bold">Courses</a>
+                          <a target="_blank" href="./course-details.html" class="accordion-txt fw-bold">Course Details</a>
+                      </div>
 
                     <button class="accordion">Pages</button>
                     <div class="panel">
@@ -465,10 +466,10 @@
                                     href="#">Home</a>
                                 <menu>
                                     <li class="position-relative d-inline-block dropdown-list">
-                                        <a href class="nav-link  me-2">Courses</a>
+                                        <a href="#"  class="nav-link  me-2">Courses</a>
                                         <ul class="edule-dropdown">
-                                            <li><a href>Course</a></li>
-                                            <li><a href>Courses
+                                            <li><a href="./courses.html" target="_blank">Course</a></li>
+                                            <li><a href="./course-details.html" target="_blank">Courses
                                                     Details</a></li>
                                         </ul>
                                     </li>
