@@ -1,0 +1,7 @@
+# --- IDE/Editor Files ---
+.vscode/           # VS Code settings
+*.suo              # Visual Studio user options
+*.swp              # Vim swap files
+
+# --- Dependency Directories ---
+node_modules/  
