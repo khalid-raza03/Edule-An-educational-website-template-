@@ -1666,8 +1666,7 @@ a {
 //subscribe section
 .subscribe {
   background-color: #e7f8ee;
-  padding-top: 30px;
-  padding-bottom: 80px;
+  padding: 30px 30px 80px 30px;
   position: relative;
   z-index: 1;
 
@@ -1710,9 +1709,9 @@ a {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start;
+          -webkit-box-align:center;
+          -ms-flex-align:center;
+          align-items: center;
           margin-bottom: 0;
 
           i {
@@ -1723,8 +1722,7 @@ a {
           a {
             text-decoration: none;
             color: inherit;
-            margin-top: 3px;
-            margin-left: 15px;
+            margin-left: 10px;
             transition: all 0.3s ease 0s;
             outline: 0;
           }

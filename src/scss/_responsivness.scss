@@ -308,6 +308,7 @@
 
 @media screen and (max-width: 462px) {
 
+ 
   .navbar-brand img {
     width: 100px;
     height: 27px;
@@ -356,4 +357,14 @@
   font-size: 1.5rem !important;
 
  }
+}
+
+
+@media screen and (max-width:376px) {
+  .subscribe .footer-widget-link{
+    flex-direction: column;
+  }
+  .subscribe .footer-widget-link .footer-widget{
+    width: 100% !important;
+  }
 }

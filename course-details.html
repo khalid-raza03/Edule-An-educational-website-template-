@@ -123,57 +123,6 @@
         color: #eefbf3;
     }
 
-    @media screen and (max-width:1200px) {
-
-        .course-details-wrapper .instructors .rating-box {
-            padding: 50px 5px;
-        }
-    }
-
-    @media screen and (max-width:992px) {
-        .edule-course-category .category-wrapper .row {
-            flex-direction: column-reverse !important;
-        }
-
-    }
-
-
-    @media screen and (min-width:576px) and (max-width:767px) {
-        .container {
-            max-width: 650px !important;
-        }
-    }
-
-
-
-    @media screen and (max-width:576px) {
-        .course-tabs {
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem !important;
-        }
-
-        .edule-course-category .category-wrapper .row {
-            row-gap: 1rem !important;
-        }
-
-        .course-header .img-box img {
-            width: 75%;
-        }
-
-        .course-header .animation-3 {
-            right: 15%;
-            top: 15%;
-
-        }
-    }
-
-
-    @media screen and (max-width:376px) {
-        .course-header .img-box {
-            padding-top: 30px;
-        }
-    }
 
     .course-details-wrapper .desc-txt {
         margin-bottom: 0;
@@ -185,11 +134,11 @@
         text-align: justify;
     }
 
-    .course-details-wrapper .share-course{
+    .course-details-wrapper .share-course {
         margin-top: 50px;
     }
 
-    .course-details-wrapper .share-course .socials{
+    .course-details-wrapper .share-course .socials {
         margin-top: 25px;
     }
 
@@ -216,21 +165,24 @@
 
 
     .course-details .course-preview .circle-shape {
+        opacity: 0.75;
         position: absolute;
-        left: 40%;
-        top: 40%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .course-details .course-preview .fa-play {
         position: absolute;
-        left: 45%;
+        left: 50%;
         top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .course-details .course-preview .course-category-btn {
         position: absolute;
         left: 3%;
-        top: 90%;
+        bottom: 5%;
         padding: 5px 18px;
         letter-spacing: 1px;
         line-height: 1.5rem;
@@ -247,6 +199,10 @@
         font-weight: 500;
         letter-spacing: 1px;
         line-height: 40px;
+        text-decoration: underline;
+        text-decoration-thickness: from-font;
+        text-decoration-color: #309255;
+        text-underline-offset: 6px;
     }
 
     .course-details-wrapper .course-info-card {
@@ -260,6 +216,109 @@
         padding: 20px 0;
         display: flex;
         justify-content: center;
+    }
+
+
+    @media screen and (max-width:1200px) {
+
+        .course-details-wrapper .instructors .rating-box {
+            padding: 50px 5px;
+        }
+    }
+
+    @media screen and (max-width:992px) {
+        .edule-course-category .category-wrapper .row {
+            flex-direction: column-reverse !important;
+        }
+
+
+    }
+
+
+    @media screen and (min-width:576px) and (max-width:767px) {
+        .container {
+            max-width: 650px !important;
+        }
+
+    }
+
+    @media screen and (max-width:768px) {
+        .course-details-wrapper .rating-content {
+            flex-direction: column;
+        }
+
+        .course-details-wrapper .instructors .rating-box {
+            padding: 50px 15px;
+        }
+
+        .course-details .course-preview-head {
+            font-size: 24px;
+        }
+    }
+
+
+
+    @media screen and (max-width:576px) {
+
+        .course-details .course-preview .course-category-btn {
+            font-size: 14px;
+            padding: 5px 12px;
+        }
+
+        .course-details .course-preview .circle-shape img {
+            width: 82%;
+        }
+
+        .course-details .course-preview-head {
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0;
+        }
+
+        .feedbacks .feedbackSwiper .testimonials {
+            padding: 25px;
+        }
+
+        .course-details-wrapper .instructors .content-box {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .course-details-wrapper .instructors .content-header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .course-tabs {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem !important;
+        }
+
+        .edule-course-category .category-wrapper .row {
+            row-gap: 1rem !important;
+        }
+
+        .course-header .img-box img {
+            width: 75%;
+        }
+
+        .course-header .animation-3 {
+            right: 15%;
+            top: 15%;
+
+        }
+
+        .course-details-wrapper .rating-star .fa-star {
+            font-size: 12px;
+        }
+    }
+
+
+    @media screen and (max-width:376px) {
+        .course-header .img-box {
+            padding-top: 30px;
+        }
     }
 </style>
 
@@ -533,25 +592,25 @@
     <div class="course-details-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-12 d-flex flex-column">
+                <div class="col-xl-8 col-12 d-flex flex-column">
                     <section class="course-details">
 
                         <div class="course-preview position-relative">
                             <img class="img-fluid w-100" src="./src/images/courses-details.webp" alt="course-preview">
-                            <a href="#" target="_blank" rel="noopener noreferrer"> <img class="circle-shape"
+                            <a class="circle-shape" href="#" target="_blank" rel="noopener noreferrer"> <img
                                     src="./src/images/circle-shape.webp" alt="play-circle"></a>
                             <i class="fa-solid fa-play fs-3 text-white"></i>
                             <a href="#" class="bg-warning text-white rounded course-category-btn">Finance</a>
                         </div>
                         <p class="course-preview-head text-wrap">
-                            Finance & Investment Series: Learn to Budget and
+                            <strong>Finance & Investment Series: </strong> Learn to Budget and
                             Calculate Your Net Worth.
                         </p>
 
                     </section>
 
                     <!-- My courses -->
-                    <section class="section edule-course-category bg-white pt-5 pb-5">
+                    <section class="section edule-course-category bg-white pt-sm-5 pb-5">
 
                         <div class="category-wrapper">
                             <div class="row  row-gap-5 ">
@@ -620,32 +679,7 @@
 
                                     <h3 class="fs-3 fw-bold text-body-secondary my-2">Curriculum:
                                     </h3>
-                                     <p class="desc-txt">
-                                        Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem
-                                    Ipsum has been
-                                    the industry's standard dummy text
-                                    ever since the 1500s when an unknown
-                                    printer
-                                    took a galley of
-                                    type and scrambled it to make a type
-                                    specimen book. It has survived not
-                                    only
-                                    five centuries, but
-                                    also the leap into electronic
-                                    typesetting, remaining essentially
-                                    unchanged. It
-                                    was popularsed in
-                                    the 1960 with release containing
-                                    Lorem Ipsum passages desktop
-                                    publishing
-                                    software.
-                                     </p>
-
-                                    <h3 class="fs-3 fw-bold text-body-secondary my-2">Certification:
-                                    </h3>
-                                     <p class="desc-txt">
+                                    <p class="desc-txt">
                                         Lorem Ipsum is simply dummy text of
                                         the printing and typesetting
                                         industry. Lorem
@@ -666,7 +700,32 @@
                                         Lorem Ipsum passages desktop
                                         publishing
                                         software.
-                                     </p>
+                                    </p>
+
+                                    <h3 class="fs-3 fw-bold text-body-secondary my-2">Certification:
+                                    </h3>
+                                    <p class="desc-txt">
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem
+                                        Ipsum has been
+                                        the industry's standard dummy text
+                                        ever since the 1500s when an unknown
+                                        printer
+                                        took a galley of
+                                        type and scrambled it to make a type
+                                        specimen book. It has survived not
+                                        only
+                                        five centuries, but
+                                        also the leap into electronic
+                                        typesetting, remaining essentially
+                                        unchanged. It
+                                        was popularsed in
+                                        the 1960 with release containing
+                                        Lorem Ipsum passages desktop
+                                        publishing
+                                        software.
+                                    </p>
                                 </div>
                             </div>
 
@@ -682,7 +741,7 @@
                                                 <img width="130" height="130" class="img-fluid rounded-circle"
                                                     src="./src/images/author-01.webp" alt>
                                             </div>
-                                            <div class="ratings d-flex gap-1">
+                                            <div class="ratings d-flex align-items-center gap-2 gap-sm-1">
                                                 4.5 <i class="fa-solid fa-star text-warning"></i>
                                                 (rating)</div>
                                             <p class="author-name mb-0 fw-bold mb-2">Jason
@@ -695,7 +754,7 @@
                                                 <img width="130" height="130" class="img-fluid rounded-circle"
                                                     src="./src/images/author-02.webp" alt>
                                             </div>
-                                            <div class="ratings d-flex gap-1">
+                                            <div class="ratings d-flex align-items-center gap-2 gap-sm-1">
                                                 4.5 <i class="fa-solid fa-star text-warning"></i>
                                                 (rating)</div>
                                             <p class="author-name mb-0 fw-bold mb-2">Robin
@@ -708,7 +767,7 @@
                                                 <img width="130" height="130" class="img-fluid rounded-circle"
                                                     src="./src/images/author-11.webp" alt>
                                             </div>
-                                            <div class="ratings d-flex gap-1">
+                                            <div class="ratings d-flex align-items-center gap-2 gap-sm-1">
                                                 4.5 <i class="fa-solid fa-star text-warning"></i>
                                                 (rating)</div>
                                             <p class="author-name mb-0 fw-bold mb-2">Analisa
@@ -721,7 +780,7 @@
                                                 <img width="130" height="130" class="img-fluid rounded-circle"
                                                     src="./src/images/author-04.webp" alt>
                                             </div>
-                                            <div class="ratings d-flex gap-1">
+                                            <div class="ratings d-flex align-items-center gap-2 gap-sm-1">
                                                 4.5 <i class="fa-solid fa-star text-warning"></i>
                                                 (rating)</div>
                                             <p class="author-name mb-0 fw-bold mb-2">Liza
@@ -730,8 +789,8 @@
                                                 Instructor</span>
                                         </div>
                                     </div>
-                                    <div class="row mt-3 ">
-                                        <div class="col-6">
+                                    <div class="row mt-3  rating-content row-gap-md-0 row-gap-3">
+                                        <div class="col-md-6 col-12">
                                             <div class="rating-txt">
                                                 <h3 class="content-head fs-3 mb-3 fw-bold">Rating
                                                     : </h3>
@@ -776,7 +835,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-md-6 col-12">
                                             <div class="rating-box  d-flex flex-column align-items-center border">
                                                 <div class="content-head fs-3">
                                                     4.0 <i class="fa-solid fa-star fs-5 text-warning"></i>
@@ -1129,7 +1188,7 @@
 
                     </section>
                 </div>
-                <div class="col-lg-4 col-12">
+                <div class="col-xl-4 col-12">
 
                     <div class="course-info-card p-3">
                         <div class="content-header py-3 d-flex justify-content-center">
@@ -1166,16 +1225,16 @@
                         </div>
 
 
-                        
+
+                    </div>
+                    <div class="share-course py-xl-0 pb-5">
+                        <h3 class="content-head fs-3 text-dark fw-bold">Share Course:</h3>
+                        <div class="socials d-flex justify-content-xl-between justify-content-start gap-xl-0 gap-4">
+                            <i class="fa-brands fs-3 fa-facebook"></i>
+                            <i class="fa-brands fs-3 fa-instagram"></i>
+                            <i class="fa-brands fs-3 fa-twitter"></i>
+                            <i class="fa-brands fs-3 fa-linkedin"></i>
                         </div>
-                        <div class="share-course">
-                            <h3 class="content-head fs-3 text-dark fw-bold">Share Course:</h3>
-                            <div class="socials d-flex justify-content-between">
-                                <i class="fa-brands fs-3 fa-facebook"></i>
-                                <i class="fa-brands fs-3 fa-instagram"></i>
-                                <i class="fa-brands fs-3 fa-twitter"></i>
-                                <i class="fa-brands fs-3 fa-linkedin"></i>
-                            </div>
                     </div>
                 </div>
             </div>
@@ -1343,10 +1402,10 @@
         var swiper = new Swiper(".feedbackSwiper", {
             slidesPerView: 1,
             spaceBetween: 40,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
+            /* autoplay: {
+                 delay: 2500,
+                 disableOnInteraction: false,
+             },*/
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

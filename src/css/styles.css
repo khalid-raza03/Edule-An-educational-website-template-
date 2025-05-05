@@ -317,6 +317,14 @@ h6 {
     font-size: 1.5rem !important;
   }
 }
+@media screen and (max-width: 376px) {
+  .subscribe .footer-widget-link {
+    flex-direction: column;
+  }
+  .subscribe .footer-widget-link .footer-widget {
+    width: 100% !important;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -2118,8 +2126,7 @@ a {
 
 .subscribe {
   background-color: #e7f8ee;
-  padding-top: 30px;
-  padding-bottom: 80px;
+  padding: 30px 30px 80px 30px;
   position: relative;
   z-index: 1;
 }
@@ -2153,7 +2160,7 @@ a {
 .subscribe .footer-widget .widget-info li p {
   font-size: 15px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 0;
 }
 .subscribe .footer-widget .widget-info li p i {
@@ -2163,8 +2170,7 @@ a {
 .subscribe .footer-widget .widget-info li p a {
   text-decoration: none;
   color: inherit;
-  margin-top: 3px;
-  margin-left: 15px;
+  margin-left: 10px;
   transition: all 0.3s ease 0s;
   outline: 0;
 }
