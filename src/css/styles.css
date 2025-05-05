@@ -486,7 +486,8 @@ a {
 .section.dark span,
 .section.dark h3,
 .section.dark p,
-.section.dark .title a {
+.section.dark .title a,
+.section.dark h4 {
   color: white !important;
 }
 
