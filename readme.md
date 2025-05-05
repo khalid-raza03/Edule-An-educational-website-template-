@@ -1,32 +1,37 @@
-# Project Name  
+# Project Name
 
-**Edule** , a responsive Educational website landinng page **HTML, Sass, and Bootstrap**.  
+**Edule** , a responsive Educational website landinng page **HTML, Sass, and Bootstrap**.
 
-## Features  
-- fully responsive design 
-- Sass-powered styling  
-- component based design  
-- dark mode switch   
+## Features
+
+- fully responsive design
+- Sass-powered styling
+- component based design
+- dark mode switch
 - Well optimised with google insight techniques
 
-## Demo  
-👉 [Live Preview](https://khalid-raza03.github.io/edule-landing-page/)  
+## Demo
+
+👉 [Live Preview](https://khalid-raza03.github.io/Edule-An-educational-website-template-/)
 
 ## Screenshots
+
 ![Project Screenshot](./src/images/edule-ss-1.png)
 
-## Technologies  
-- HTML5  
-- Sass (SCSS)  
-- Bootstrap 5  
+## Technologies
+
+- HTML5
+- Sass (SCSS)
+- Bootstrap 5
 - swiper js
-- Vanilla JavaScript  
+- Vanilla JavaScript
 
-## Installation in local 
+## Installation in local
 
-1. __Clone the repo:__  
+1. **Clone the repo:**
 
    ```bash
    git clone https://github.com/khalid-raza03/edule-landing-page.git
    ```
-2. Open `index.html` in a browser.  
+
+2. Open `index.html` in a browser.
