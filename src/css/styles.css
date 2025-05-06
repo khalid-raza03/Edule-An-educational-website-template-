@@ -300,7 +300,7 @@ h6 {
     padding: 1rem !important;
   }
   .be-instructor .instructor-wrapper {
-    padding: 85px 40px !important;
+    padding: 40px !important;
   }
   .be-instructor .instructor-wrapper .left-box .sub-title {
     font-size: 0.8rem;
@@ -846,8 +846,8 @@ a {
   background-repeat: no-repeat;
   width: 214px;
   height: 21px;
-  left: 50%;
-  bottom: -26px;
+  left: 60%;
+  bottom: -25px;
   transform: translateX(-50%);
 }
 .edule-home .home-text-content p {

@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edule Courses</title>
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+
+    <!-- for icons  -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css">
+
+    <!-- swiper js for sliders  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<style>
+    .course-header {
+        background-color: #eefbf3;
+        padding: 50px 0;
+        position: relative;
+    }
+
+    .section.dark .home-link {
+        color: #eefbf3 !important;
+    }
+
+    .course-header .img-box img {
+        border-radius: 50%;
+    }
+
+    @keyframes left {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-2.5rem);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .course-header .animation-3 {
+        position: absolute;
+        top: 20%;
+        right: 30%;
+        animation: left 4s linear 0s infinite normal forwards;
+    }
+
+    @keyframes rotatefull {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .course-header .animation-1 {
+        left: 5%;
+        top: 55%;
+        position: absolute;
+        animation: rotatefull 8s linear infinite;
+    }
+
+    .about-us .experience {
+        position: absolute;
+        right: 5%;
+        max-width: 130px;
+        top: 15%;
+        transform: translate(-5%, -15%);
+        border-radius: 10px;
+        color: #fff;
+        background-color: #309255;
+    }
+
+    .about-us .experience-icon {
+        max-width: 80px;
+        max-height: 80px;
+        margin-top: -35px;
+    }
+
+    .about-us .right {
+        padding-left: 30px;
+    }
+
+    .instructor-features .top .icon-box {
+        background-color: #eefbf3;
+        padding: 7%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .instructor-features .content:hover .icon-box {
+        background-color: #309255;
+        color: #fff;
+    }
+
+    .instructor-features .content {
+        transition: border 0.3s ease-in-out;
+    }
+
+    .instructor-features .content:hover {
+        border-color: #309255 !important;
+    }
+
+    .team-members .content .img-box {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .team-members .content .img-box:hover {
+        border-color: #309255 !important;
+    }
+
+
+    @media screen and (max-width:993px) {
+        .about-us .right {
+            padding-left: 0px;
+        }
+    }
+
+
+    @media screen and (min-width:576px) and (max-width:767px) {
+        .container {
+            max-width: 650px !important;
+        }
+    }
+
+
+
+    @media screen and (max-width:576px) {
+
+        .course-header .img-box img {
+            width: 75%;
+        }
+
+        .course-header .animation-3 {
+            right: 15%;
+            top: 15%;
+
+        }
+    }
+
+
+    @media screen and (max-width:376px) {
+        .course-header .img-box {
+            padding-top: 30px;
+        }
+
+        .about-us .experience {
+            top: 16%;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- go to top button -->
+    <button class="border" onclick="topFunction()" id="eduleScrollBtn" title="Go to top"><i
+            class="fa-solid fa-angle-up"></i></button>
+
+    <header class="edule-header section pb-5">
+        <!-- top nav -->
+        <div class="top-nav">
+            <nav class="navbar navbar-expand-lg  d-none d-lg-flex">
+                <div class="container gx-0">
+                    <button name="toggler-button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        navbar toggler button
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link active text-white nav-txt" aria-current="page" href="#">All course
+                                    28% off for
+                                    <span class="text-white" href="#">Liberian people’s.</span></a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link nav-txt" href="#"><img src="src/images/shape-1.webp" alt="edule-img"
+                                        width="41" height="14"></a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link text-white nav-txt" href="#"><i
+                                        class="fa-solid fa-phone-volume text-white pe-1"></i>
+                                    (077) 123-456</a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link text-white nav-txt" href="#"><i
+                                        class="fa-solid fa-envelope text-white pe-1"></i>
+                                    address@gmail.com</a>
+                            </li>
+                            <li class="nav-item pe-xl-5 pe-lg-2">
+                                <a class="nav-link nav-txt" href="#"><img src="src/images/shape-2.webp" alt="edule-img"
+                                        width="41" height="14"></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a title="social-links" class="nav-link text-white nav-txt" href="#"><i
+                                        class="socials fa-brands fa-facebook fs-5"></i><i
+                                        class="socials fa-brands fa-twitter px-3 fs-5"></i><i
+                                        class="socials fa-brands fa-skype fs-5"></i><i
+                                        class="socials fa-brands fa-instagram ps-3 fs-5"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="offcanvas offcanvas-start mobile-menu-edule" tabindex="-1" id="navbarOffcanvasLg"
+            aria-labelledby="navbarOffcanvasLgLabel">
+            <div class="offcanvas-header p-4">
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mobile-menu-body">
+
+                <ul class="navbar-nav text-center">
+
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark nav-txt" href="#"><i
+                                class="fa-solid fa-phone-volume text-white pe-2"></i>
+                            (077) 123-456</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark nav-txt" href="#"><i
+                                class="fa-solid fa-envelope text-white pe-2"></i>
+                            address@gmail.com</a>
+                    </li>
+
+                    <li class="nav-item mt-3">
+                        <a class="nav-link " href="./login-signup.html"><button class=" nav-btn"> Sign
+                                In</button> <button class="ms-4 nav-btn "> Sign
+                                Up</button></a>
+                    </li>
+
+                </ul>
+
+                <!-- Accordion -->
+                <div class="edule-accordion position-relative">
+                    <button href="./index.html" class="accordion-static pb-3">Home</button>
+                    <button class="accordion">All Courses</button>
+                    <div class="panel d-flex flex-column align-items-start gap-3 ms-2">
+                        <a target="_blank" href="./courses.html" class="accordion-txt fw-bold">Courses</a>
+                        <a target="_blank" href="./course-details.html" class="accordion-txt fw-bold">Course Details</a>
+                    </div>
+
+                    <button class="accordion">Pages</button>
+                    <div class="panel">
+                        <p class="accordion-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+
+                    <button class="accordion">Blog</button>
+                    <div class="panel">
+                        <p class="accordion-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </div>
+                    <button class="accordion-static pb-3">Contact</button>
+                </div>
+
+                <div class="mobile-menu-social ">
+                    <a class="nav-link text-dark  nav-txt" href="#"><i class="fa-brands fa-facebook fs-5"></i><i
+                            class="fa-brands fa-twitter px-3 fs-5"></i><i class="fa-brands fa-skype fs-5"></i><i
+                            class="fa-brands fa-instagram ps-3 fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- main and onscroll navbar -->
+        <section id="onScrollNavBar" class="section  header-nav main-nav border-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="src/images/logo.webp"
+                                srcset="src/images/logo-2x.webp 2x, src/images/logo-3x.webp 3x" width="178" height="44"
+                                alt="EduLe Logo">
+                        </a>
+
+                        <div class="collapse navbar-collapse nav-center d-none d-lg-flex" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active me-2 position-relative home" aria-current="page"
+                                    href="./index.html">Home</a>
+                                <menu>
+                                    <li class="position-relative d-inline-block dropdown-list">
+                                        <a href="" class="nav-link  me-2">Courses</a>
+                                        <ul class="edule-dropdown">
+                                            <li><a href="./courses.html" target="_blank">Course</a></li>
+                                            <li><a href="./course-details.html" target="_blank">Courses Details</a></li>
+                                        </ul>
+                                    </li>
+                                </menu>
+
+                                <menu>
+                                    <li class="position-relative d-inline-block dropdown-list">
+                                        <a href="" class="nav-link  me-2">Pages</a>
+                                        <ul class="edule-dropdown">
+                                            <li><a href="./abous-us.html">About</a></li>
+                                            <li><a href="./login-signup.html">Register</a></li>
+                                            <li><a href="./login-signup.html">Login</a></li>
+                                            <li><a href="">FAQ</a></li>
+                                            <li><a href="">404 ERROR</a></li>
+                                            <li><a href="">After Enroll</a></li>
+                                            <li><a href="">Instructor Dashboard</a></li>
+                                            <li><a href="">Instructor Dashboard</a></li>
+                                            <li><a href="">Students</a></li>
+                                            <li><a href="">Reviews</a></li>
+                                            <li><a href="">Course Engagment</a></li>
+
+                                        </ul>
+                                    </li>
+                                </menu>
+
+                                <menu>
+                                    <li class="position-relative d-inline-block dropdown-list">
+                                        <a href="" class="nav-link">Blog</a>
+                                        <ul class="edule-dropdown">
+                                            <!-- sub-dropdown-1 -->
+                                            <li class="position-relative  dropdown-sub-list text-center" loading="lazy">
+                                                <a href="" class=" me-2">Blog </a>
+                                                <ul class="edule-sub-dropdown-1">
+                                                    <li><a href="">Blog Post 1</a></li>
+                                                    <li><a href="">Blog Post 1</a></li>
+                                                    <li><a href="">Blog Post 1</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- sub-dropdown-2 -->
+                                            <li class="position-relative  dropdown-sub-list text-center" loading="lazy">
+                                                <a href="" class=" me-2">Blog Deatils </a>
+                                                <ul class="edule-sub-dropdown-1 custom-align">
+                                                    <li><a href="">Blog details</a></li>
+                                                    <li><a href="">Blog details</a></li>
+                                                    <li><a href="">Blog details</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </menu>
+
+                                <a class="nav-link " href="#">Contacts</a>
+                            </div>
+                        </div>
+                        <a target="_blank" class="nav-link sign-in ms-auto d-none d-lg-block"
+                            href="./login-signup.html"> Sign In
+                        </a>
+                        <a class="ms-2 nav-btn d-none d-lg-block text-dark" target="_blank" href="./login-signup.html"
+                            class="text-dark ms-3 nav-btn"> Sign
+                            Up</a>
+
+                        <li id="darkMode" class="dark-mode-box  nav-link mt-3 ">
+                            <button class="border-0 bg-transparent mb-2 ms-2">
+                                <img class="off" src="./src/images/darkMode-off.svg" alt="darkMode-off">
+                                <img class="on " src="./src/images/dark-mode-on.svg" alt="dark-mode-on">
+                            </button>
+
+                        </li>
+
+                        <button class="navbar-toggler  d-lg-none d-inline toggle-bar" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+                            aria-controls="navbarOffcanvasLg">
+                            <i class="fa-solid fa-bars text-success fs-4"></i>
+                        </button>
+                    </div>
+
+                </nav>
+            </div>
+
+        </section>
+    </header>
+
+    <!-- section header -->
+    <section class="course-header pb-5 section">
+        <div class="animation-1 d-none d-lg-block">
+            <img src="src/images/shape-8.webp" alt="edule-img" class="mw-100">
+        </div>
+
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-md-6 col-12 d-flex">
+                    <div class="d-flex flex-column align-items-start gap-4 ">
+                        <div class="top">
+                            <a class="text-decoration-none text-dark home-link" href="./index.html">Home /</a> <a
+                                class="text-decoration-none text-success" href="#"> About</a>
+                        </div>
+                        <div class="bottom">
+                            <h3 class="fs-2 fw-bold">
+                                My <span class="text-success">Courses </span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 d-flex justify-content-end">
+                    <div class="img-box">
+                        <img src="./src/images/author-11.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="animation-3" src="src/images/shape-5.webp" alt="edule-img">
+    </section>
+
+
+    <!-- section about us -->
+    <section class="section about-us py-5">
+        <div class="container">
+            <div class="about-us-wrapper w-100">
+                <div class="row row-gap-5">
+                    <div class="col-lg-6 col-12">
+                        <div class="left position-relative">
+
+                            <div class="img-box  ">
+                                <img src="./src/images/about.webp" alt="about-us" class="img-fluid rounded w-100">
+                            </div>
+
+                            <div class="experience d-flex flex-column align-items-center px-2 py-3 py-sm-4">
+                                <div class="experience-icon bg-white p-lg-3  p-2 rounded"><img
+                                        src="./src/images/logo-icon.webp" alt="experience-icon"></div>
+                                <p class="text-center mt-2 mb-0"> <strong>28+</strong> Years Experience</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="right d-flex flex-column align-items-start justify-content-between h-100">
+
+                            <span class="text-success fs-5">Welcome to Edule. </span>
+                            <p class="fs-1 ">You can join with Edule and upgrade your skill for your <strong
+                                    class="text-success">bright future.</strong> </p>
+                            <p class="fw-light lh-lg text-body-secondary"> Lorem Ipsum has been the industr’s standard
+                                dummy text ever since unknown printer took galley type and scmbled make type specimen
+                                book. It has survived not only five centuries.</p>
+                            <a class="edule-theme-btn" href="#" target="_blank" rel="noopener noreferrer">Start a
+                                Course</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section instructor-features py-5">
+        <div class="container">
+            <div class="row row-gap-3">
+                <div class="col-lg-4 col-12">
+                    <div class="content d-flex flex-column row-gap-5 p-sm-5 p-3 border rounded">
+                        <div class="top d-flex justify-content-between align-items-center">
+                            <div class="icon-box "><i class="fa-solid fa-person-chalkboard fs-4"></i> </div>
+                            <span class="feature fs-4">Top Instructors</span>
+                        </div>
+                        <div class="bottom">
+                            <p class="content-txt text-black-50 fw-lighter text-justify">
+                                Lorem Ipsum has been the industry's standard dumy text since the when took and scrambled
+                                to make type specimen book has survived.
+                            </p>
+                            <p class="content-txt text-black-50 fw-lighter text-justify">
+                                Lorem Ipsum has been the industry's standard dumy text since the when took and scrambled
+                                make.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="content d-flex flex-column row-gap-5 p-sm-5 p-3 border rounded">
+                        <div class="top d-flex justify-content-between align-items-center">
+                            <div class="icon-box "><i class="fa-solid fa-code fs-4"></i> </div>
+                            <span class="feature fs-4">Portable Prog.</span>
+                        </div>
+                        <div class="bottom">
+                            <p class="content-txt text-black-50 fw-lighter text-justify">
+                                Lorem Ipsum has been the industry's standard dumy text since the when took and scrambled
+                                to make type specimen book has survived.
+                            </p>
+                            <p class="content-txt text-black-50 fw-lighter text-justify">
+                                Lorem Ipsum has been the industry's standard dumy text since the when took and scrambled
+                                make.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="content d-flex flex-column row-gap-5 p-sm-5 p-3 border rounded">
+                        <div class="top d-flex justify-content-between align-items-center">
+                            <div class="icon-box "><i class="fa-solid fa-arrow-up-right-dots fs-4"></i> </div>
+                            <span class="feature fs-4">Improve Quickly</span>
+                        </div>
+                        <div class="bottom">
+                            <p class="content-txt text-black-50 fw-lighter text-justify">
+                                Lorem Ipsum has been the industry's standard dumy text since the when took and scrambled
+                                to make type specimen book has survived.
+                            </p>
+                            <p class="content-txt text-black-50 fw-lighter text-justify">
+                                Lorem Ipsum has been the industry's standard dumy text since the when took and scrambled
+                                make.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- instructor section -->
+    <section class="section be-instructor pb-5">
+        <div class="container">
+            <div class="instructor-wrapper">
+                <img src="src/images/shape-12.png" alt="edule-img" class="shape-12  animation-1">
+                <img src="src/images/shape-13.svg" alt="edule-img" class="shape-13 d-none d-lg-block">
+                <img src="src/images/shape-12.png" alt="edule-img" class="shape-14">
+                <div class="row align-item-center">
+                    <div class="col-12 col-md-6">
+                        <div class="left-box">
+                            <span class="sub-title">Become a instructor</span>
+                            <h2 class="main-title">
+                                You can join with Edule as <span>as a instructor</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="right-box d-flex justify-content-md-end">
+                            <span class="drop-info-btn ">Drop Infromation </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section team-members pb-5">
+
+        <div class="container">
+            <div class="content-header d-flex justify-content-center align-items-center flex-column py-5">
+                <p class="fs-5 text-success "> Team Members</p>
+                <h3 class="fs-2"> Edule Skilled <strong class="text-success">Instructor</strong></h3>
+            </div>
+            <div class="content-wrapper ">
+                <div class="row row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-2 gy-4">
+
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-01.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-02.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-04.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-07.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-07.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-01.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-04.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-01.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-07.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content d-flex flex-column align-items-center ">
+                            <div class="img-box p-2  border d-flex justify-content-center mb-2"
+                                style="border-radius: 75px;"> <img class="rounded-circle"
+                                    src="./src/images/author-04.webp" alt="author-thumb"></div>
+                            <div class="rating"><span class="rating-count fs-5">4.5</span> <i
+                                    class="fa-solid fa-star text-warning"></i> <span
+                                    class="text-body-tertiary">(rating)</span></div>
+                            <p class="author-name fs-4 mb-2">John Aderson</p>
+                            <p class="designation text-success fw-lighter">MSC, Instructor
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- download our app section -->
+    <section class="section  download-section container-fluid section">
+
+        <div class="app-shape app-shape-1"></div>
+        <div class="app-shape app-shape-2"></div>
+        <div class="app-shape app-shape-3"></div>
+        <div class="app-shape app-shape-4"></div>
+
+        <div class="container">
+            <div class="download-app-wrapper mt-n6">
+
+                <div class="section-title section-title-white">
+                    <h5 class="sub-title">Ready to start?</h5>
+                    <h2 class="main-title">Download our mobile app. for easy to start your course.</h2>
+                </div>
+
+
+                <img class="shape-1 animation-right d-none d-lg-block" src="src/images/shape-14.webp" alt="Shape">
+
+                <div class="download-app-btn">
+                    <ul class="app-btn d-flex">
+                        <li class="me-4 pt-2 list-unstyled"><a href="#"><img class="mw-100"
+                                    src="src/images/google-play.webp" alt="Google Play"></a></li>
+                        <li class="pt-2 list-unstyled"><a href="#"><img class="mw-100" src="src/images/app-store.webp"
+                                    alt="App Store"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- testimonials section -->
+    <section class="section  feedbacks d-flex justify-content-center text-center">
+        <div class="container W-100 overflow-hidden
+      ">
+            <div class="section-title">
+                <span class="sub-title">Student Testimonial</span>
+                <h2 class="main-title">Feedbacks from <span>Student</span></h2>
+            </div>
+            <div class="swiper feedbackSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonials">
+                        <div class="testimonial-author">
+                            <div class="author-thumb">
+                                <img src="src/images/author-07.webp" alt="Author">
+
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+
+                            <span class="rating-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-bar" style="width: 80%">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>Lorem Ipsum has been the industry's standard dummy text since the 1500s, when an unknown
+                                printer took
+                                a galley of type and scrambled it to make type specimen book has survived not five
+                                centuries but also
+                                the leap into electronic.</p>
+                            <h4 class="name">Melissa Roberts</h4>
+                            <span class="designation">Product Designer, USA</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials">
+                        <div class="testimonial-author">
+                            <div class="author-thumb">
+                                <img src="src/images/author-07.webp" alt="Author">
+
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+
+                            <span class="rating-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-bar" style="width: 80%">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>Lorem Ipsum has been the industry's standard dummy text since the 1500s, when an unknown
+                                printer took
+                                a galley of type and scrambled it to make type specimen book has survived not five
+                                centuries but also
+                                the leap into electronic.</p>
+                            <h4 class="name">Melissa Roberts</h4>
+                            <span class="designation">Product Designer, USA</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials">
+                        <div class="testimonial-author">
+                            <div class="author-thumb">
+                                <img src="src/images/author-07.webp" alt="Author">
+
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+
+                            <span class="rating-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-bar" style="width: 80%">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>Lorem Ipsum has been the industry's standard dummy text since the 1500s, when an unknown
+                                printer took
+                                a galley of type and scrambled it to make type specimen book has survived not five
+                                centuries but also
+                                the leap into electronic.</p>
+                            <h4 class="name">Melissa Roberts</h4>
+                            <span class="designation">Product Designer, USA</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials">
+                        <div class="testimonial-author">
+                            <div class="author-thumb">
+                                <img src="src/images/author-07.webp" alt="Author">
+
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+
+                            <span class="rating-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-bar" style="width: 80%">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>Lorem Ipsum has been the industry's standard dummy text since the 1500s, when an unknown
+                                printer took
+                                a galley of type and scrambled it to make type specimen book has survived not five
+                                centuries but also
+                                the leap into electronic.</p>
+                            <h4 class="name">Melissa Roberts</h4>
+                            <span class="designation">Product Designer, USA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured section -->
+    <section class="section supporters">
+        <div class="container">
+
+            <div class="supporter-wrapper">
+                <img src="src/images/shape-19.webp" alt="edule-img" class="shape-19 d-none d-md-block">
+                <img src="src/images/shape-20.webp" alt="edule-img" class="shape-20 d-none d-md-block animation-round">
+                <div class="section-title">
+                    <h2 class="main-title">Best Supporters of <span>Edule.</span></h2>
+                </div>
+
+                <div class="brand-logos ps-lg-4">
+                    <div class="swiper brandSwiper">
+                        <div class="swiper-wrapper eduleSwiper-wrapper">
+                            <div class="swiper-slide slides-brand">
+                                <span><img src="src/images/brand-01.webp" alt="edule-img" class="mw-100"></span>
+                            </div>
+                            <div class="swiper-slide slides-brand">
+                                <span><img src="src/images/brand-02.webp" alt="edule-img" class="mw-100"></span>
+                            </div>
+                            <div class="swiper-slide slides-brand">
+                                <span><img src="src/images/brand-03.webp" alt="edule-img" class="mw-100"></span>
+                            </div>
+                            <div class="swiper-slide slides-brand">
+                                <span><img src="src/images/brand-04.webp" alt="edule-img" class="mw-100"></span>
+                            </div>
+                            <div class="swiper-slide slides-brand">
+                                <span><img src="src/images/brand-05.webp" alt="edule-img" class="mw-100"></span>
+                            </div>
+                            <div class="swiper-slide slides-brand">
+                                <span><img src="src/images/brand-06.webp" alt="edule-img" class="mw-100"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- subscribe section -->
+    <section class="section subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 order-md-1 order-lg-1">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#"><img src="src/images/logo.webp" alt="Logo" class="mw-100"></a>
+                        </div>
+
+                        <div class="widget-address">
+                            <h4 class="footer-widget-title">Caribbean Ct</h4>
+                            <p>Haymarket, Virginia (VA).</p>
+                        </div>
+
+                        <ul class="widget-info ps-0">
+                            <li>
+                                <p> <i class="fa-solid fa-envelope"></i> <a
+                                        href="mailto:address@gmail.com">address@gmail.com</a> </p>
+                            </li>
+                            <li class="mt-2">
+                                <p> <i class="fa-solid fa-phone"></i> <a href="tel:9702621413">(970) 262-1413</a> </p>
+                            </li>
+                        </ul>
+
+                        <ul class="widget-social ps-0">
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-facebook"></i></a></li>
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-twitter"></i></a></li>
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-skype"></i></a></li>
+                            <li><a href="#" title="social-icons"><i class="fa-brands  fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-md-3 order-lg-2">
+
+                    <div class="footer-widget-link">
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Category</h4>
+
+                            <ul class="widget-link">
+                                <li><a href="#">Creative Writing</a></li>
+                                <li><a href="#">Film &amp; Video</a></li>
+                                <li><a href="#">Graphic Design</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                                <li><a href="#">Business Analytics</a></li>
+                                <li><a href="#">Marketing</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Quick Links</h4>
+
+                            <ul class="widget-link">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Discussion</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                                <li><a href="#">Customer Support</a></li>
+                                <li><a href="#">Course FAQ’s</a></li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 order-md-2 order-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="footer-widget-title fw-bold fs-5">Subscribe</h4>
+
+                        <div class="widget-subscribe">
+                            <p>Lorem Ipsum has been them an industry printer took a galley make book.</p>
+
+                            <div class="widget-form">
+                                <form action="#">
+                                    <input name="email here" type="text" placeholder="Email here">
+                                    <button class="edule-theme-btn">Subscribe Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class=" section-footer">
+        <div class="footer-copyright section">
+            <div class="container">
+
+                <!-- Footer Copyright Start -->
+                <div class="copyright-wrapper">
+                    <div class="copyright-link">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Sitemap</a>
+                        <a href="#">Security</a>
+                    </div>
+                    <div class="copyright-text">
+                        <p>© 2025 <span> Edule </span> Made with <i class="fa-solid fa-heart"></i> by <a href="#">Khalid
+                                Raja</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Footer Copyright End -->
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script async src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+          //feedback swiper
+
+        var swiper = new Swiper(".feedbackSwiper", {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                992: {
+                    slidesPerView: 2,
+                },
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            },
+        });
+
+
+        // scroll to top button
+        document.addEventListener("DOMContentLoaded", function () {
+            let mybutton = document.getElementById("eduleScrollBtn");
+
+            window.onscroll = function () {
+                if (
+                    document.body.scrollTop > 200 ||
+                    document.documentElement.scrollTop > 200
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            };
+        });
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        //onscroll navbar function
+        var onscrollNav = document.getElementById("onScrollNavBar");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 80) {
+                onscrollNav.classList.add("active");
+            } else {
+                onscrollNav.classList.remove("active");
+            }
+        });
+
+        //edule accordion script
+        var acc = document.getElementsByClassName("accordion");
+
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                // Close all accordions first
+                for (let j = 0; j < acc.length; j++) {
+                    if (acc[j] !== this) {
+                        acc[j].classList.remove("active");
+                        acc[j].nextElementSibling.style.maxHeight = null;
+                    }
+                }
+
+                // Toggle the clicked accordion
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+       
+        //brands slider
+
+        var swiper = new Swiper(".brandSwiper", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 5, // large screens (tablets, etc.)
+                },
+
+                992: {
+                    slidesPerView: 5, // Medium screens (tablets,ipads etc.)
+                },
+                768: {
+                    slidesPerView: 4, // Smaller screens 
+                },
+                568: {
+                    slidesPerView: 3, // Smaller screens (mobile)
+                },
+                320: {
+                    slidesPerView: 2, // Smaller screens (mobile)
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+          
+        //dark mode toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            var darkModeBtn = document.getElementById("darkMode");
+            var sections = document.querySelectorAll(".section");
+
+            darkModeBtn.addEventListener("click", () => {
+                darkModeBtn.classList.toggle("turn-on");
+
+                sections.forEach((section) => {
+                    section.classList.toggle("dark");
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
