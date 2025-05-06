@@ -248,6 +248,20 @@
     }
 
     @media screen and (max-width:767px) {
+
+      .course-details-wrapper .instructor-details .instructor-name, .student-enrolled{
+          font-size:14px;
+      }
+
+      .course-details-wrapper .instructor-details .right span{
+        font-size: 14px;
+      }
+
+      .course-details .instructor-details{
+        flex-direction: column;
+        gap: 30px;
+      }
+
         .course-details-wrapper .rating-content {
             flex-direction: column;
         }
@@ -324,6 +338,10 @@
 
 
     @media screen and (max-width:376px) {
+
+        .course-details-wrapper .instructor-details .instructor-name, .student-enrolled{
+            font-size: 12px;
+        }
         .course-header .img-box {
             padding-top: 30px;
         }
@@ -417,7 +435,7 @@
 
                 <!-- Accordion -->
                 <div class="edule-accordion position-relative">
-                    <button class="accordion-static pb-3">Home</button>
+                    <button href="./index.html"  class="accordion-static pb-3">Home</button>
                     <button class="accordion">All Courses</button>
                     <div class="panel d-flex flex-column align-items-start gap-3 ms-2">
                         <a target="_blank" href="./courses.html" class="accordion-txt fw-bold">Courses</a>
@@ -463,7 +481,7 @@
                         <div class="collapse navbar-collapse nav-center d-none d-lg-flex" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <a class="nav-link active me-2 position-relative home" aria-current="page"
-                                    href="#">Home</a>
+                                    href="./index.html">Home</a>
                                 <menu>
                                     <li class="position-relative d-inline-block dropdown-list">
                                         <a href="#"  class="nav-link  me-2">Courses</a>
@@ -574,7 +592,7 @@
                 <div class="col-md-6 col-12 d-flex">
                     <div class="d-flex flex-column align-items-start gap-4 ">
                         <div class="top">
-                            <a class="text-decoration-none text-dark home-link" href="#">Home /</a> <a
+                            <a class="text-decoration-none text-dark home-link" href="./index.html">Home /</a> <a
                                 class="text-decoration-none text-success" href="#"> Courses</a>
                         </div>
                         <div class="bottom">
@@ -612,6 +630,26 @@
                             <strong>Finance & Investment Series: </strong> Learn to Budget and
                             Calculate Your Net Worth.
                         </p>
+
+                        <div class="instructor-details d-flex justify-content-between"> <div class="left d-flex gap-sm-3 gap-2 align-items-center"><img src="./src/images/author-01.webp" alt="author-01" width="50" class="rounded-circle">  <span class="instructor-name text-body-tertiary fw-bold">Pamela Foaster</span> <span class="text-body-tertiary">||</span> <span class="student-enrolled text-success">205 students enrolled</span></div> <div class="right d-flex align-items-center gap-1"> <span class=" fw-bold">4.9</span>  
+                            <span class="rating-star position-relative ms-2" style="color: #e9ecef;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="rating-bar position-absolute " style="width: 60%;
+                                                                               top: -2px;
+                                                                               left: 0;
+                                                                               height: 100%;
+                                                                               overflow: hidden;">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </span>
+                        </span> <span class="text-body-tertiary">(5467 Rating)</span> </div> </div>
 
                     </section>
 
@@ -888,10 +926,10 @@
                                                         <i class="fa-solid fa-star"></i>
                                                         <i class="fa-solid fa-star"></i>
                                                         <span class="rating-bar position-absolute " style="width: 50%;
-                                        top: -2px;
-                                        left: 0;
-                                        height: 100%;
-                                        overflow: hidden;">
+                                                                                                           top: -2px;
+                                                                                                           left: 0;
+                                                                                                           height: 100%;
+                                                                                                           overflow: hidden;">
                                                             <i class="fa-solid fa-star text-warning"></i>
                                                             <i class="fa-solid fa-star text-warning"></i>
                                                             <i class="fa-solid fa-star text-warning"></i>
@@ -1408,10 +1446,10 @@
         var swiper = new Swiper(".feedbackSwiper", {
             slidesPerView: 1,
             spaceBetween: 40,
-            /* autoplay: {
+             autoplay: {
                  delay: 2500,
                  disableOnInteraction: false,
-             },*/
+             },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
